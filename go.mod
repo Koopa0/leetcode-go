@@ -1,3 +1,3 @@
-module github.com/koopa0/leetcode-go
+module leetcode-go
 
-go 1.24
+go 1.24.1
