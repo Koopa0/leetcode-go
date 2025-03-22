@@ -9,7 +9,7 @@ func TestTrap(t *testing.T) {
 		expected int
 	}{
 		{
-			name:     "LeetCode 示例",
+			name:     "LeetCode 範例",
 			heights:  []int{0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1},
 			expected: 6,
 		},

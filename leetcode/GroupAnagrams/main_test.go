@@ -143,7 +143,7 @@ func normalizeGroups(groups [][]string) [][]string {
 // 幫助函數：生成大量測試數據
 func generateLargeInput(size int) []string {
 	// 在實際測試中，可以生成大量的字母異序詞
-	// 這裡只是一個簡單的示例
+	// 這裡只是一個簡單的範例
 	result := make([]string, size)
 	for i := 0; i < size; i++ {
 		// 生成字母異序詞的邏輯
