@@ -20,7 +20,7 @@ func TestTwoSum(t *testing.T) {
 			want:   []int{0, 1},
 		},
 		{
-			name:   "數組中有重複元素",
+			name:   "有重複元素",
 			nums:   []int{3, 3},
 			target: 6,
 			want:   []int{0, 1},
@@ -32,7 +32,7 @@ func TestTwoSum(t *testing.T) {
 			want:   []int{2, 4},
 		},
 		{
-			name:   "較大數組",
+			name:   "較大",
 			nums:   []int{1, 3, 5, 7, 9, 11, 13, 16, 17},
 			target: 16,
 			want:   []int{3, 4},

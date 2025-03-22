@@ -11,7 +11,7 @@ func threeSum(nums []int) [][]int {
 		return result
 	}
 
-	// 排序數組
+	// 排序
 	sort.Ints(nums)
 
 	for i := 0; i < n-2; i++ {

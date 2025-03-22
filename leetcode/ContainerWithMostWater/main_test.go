@@ -9,7 +9,7 @@ func TestMaxArea(t *testing.T) {
 	// 定義測試用例表
 	tests := []struct {
 		name     string // 測試用例名稱
-		height   []int  // 輸入的高度數組
+		height   []int  // 輸入的高度
 		expected int    // 期望的輸出結果
 	}{
 		{
@@ -18,7 +18,7 @@ func TestMaxArea(t *testing.T) {
 			expected: 49,
 		},
 		{
-			name:     "最小數組長度",
+			name:     "最小長度",
 			height:   []int{1, 2},
 			expected: 1,
 		},
@@ -28,12 +28,12 @@ func TestMaxArea(t *testing.T) {
 			expected: 20, // 5 * (5-1) = 20
 		},
 		{
-			name:     "遞增數組",
+			name:     "遞增",
 			height:   []int{1, 2, 3, 4, 5},
 			expected: 6, // min(1,5) * 4 = 4 或 min(2,5) * 3 = 6
 		},
 		{
-			name:     "遞減數組",
+			name:     "遞減",
 			height:   []int{5, 4, 3, 2, 1},
 			expected: 6, // min(5,1) * 4 = 4 或 min(5,2) * 3 = 6
 		},
@@ -70,15 +70,15 @@ func TestMaxArea(t *testing.T) {
 	}
 }
 
-// TestMaxAreaEmpty 測試空數組或長度為1的數組
+// TestMaxAreaEmpty 測試空或長度為1的
 func TestMaxAreaInvalid(t *testing.T) {
-	// 空數組應該返回0
+	// 空應該返回0
 	result := maxArea([]int{})
 	if result != 0 {
 		t.Errorf("maxArea([]): 期望 0, 得到 %d", result)
 	}
 
-	// 長度為1的數組無法形成容器，應該返回0
+	// 長度為1的無法形成容器，應該返回0
 	result = maxArea([]int{5})
 	if result != 0 {
 		t.Errorf("maxArea([5]): 期望 0, 得到 %d", result)
@@ -91,7 +91,7 @@ func TestMaxAreaLargeInput(t *testing.T) {
 		t.Skip("跳過大規模測試")
 	}
 
-	// 創建一個大型數組
+	// 創建一個大型
 	const size = 10000
 	largeArray := make([]int, size)
 	for i := 0; i < size; i++ {
@@ -101,7 +101,7 @@ func TestMaxAreaLargeInput(t *testing.T) {
 	// 執行測試並記錄時間
 	result := maxArea(largeArray)
 
-	// 檢查結果是否大於0（實際值取決於生成的數組）
+	// 檢查結果是否大於0（實際值取決於生成的）
 	if result <= 0 {
 		t.Errorf("大規模測試失敗: 得到的結果為 %d, 應該大於0", result)
 	}
@@ -118,7 +118,7 @@ func BenchmarkMaxArea(b *testing.B) {
 
 // BenchmarkMaxAreaLarge 大規模數據的基準測試
 func BenchmarkMaxAreaLarge(b *testing.B) {
-	// 創建一個大型數組
+	// 創建一個大型
 	const size = 10000
 	largeArray := make([]int, size)
 	for i := 0; i < size; i++ {
