@@ -61,6 +61,6 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 		}
 	}
 
-	// 這裡不應該到達，但為了讓編譯器開心，我們返回 0
+	// 這裡不應該到達，但為了讓編譯器開心，返回 0
 	return 0.0
 }

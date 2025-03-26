@@ -30,7 +30,7 @@ func minWindow(s string, t string) string {
 		rightChar := s[right]
 		windowCount[rightChar]++
 
-		// 如果這個字符是必需的，並且我們還沒有超過所需的計數
+		// 如果這個字符是必需的，並且還沒有超過所需的計數
 		if tCount[rightChar] > 0 && windowCount[rightChar] <= tCount[rightChar] {
 			charsFound++
 		}
@@ -48,7 +48,7 @@ func minWindow(s string, t string) string {
 			leftChar := s[left]
 			windowCount[leftChar]--
 
-			// 如果此移除影響了我們的字符計數
+			// 如果此移除影響了的字符計數
 			if tCount[leftChar] > 0 && windowCount[leftChar] < tCount[leftChar] {
 				charsFound--
 			}

@@ -1,45 +1,51 @@
 package StringtoInteger
 
-import "math"
-
 func myAtoi(s string) int {
-	// 初始化變數
+	// 定義 32 位有符號整數的範圍限制
+	const IntMax = 1<<31 - 1 // 2^31 - 1
+	const IntMin = -1 << 31  // -2^31
+
+	// 初始化結果和符號
 	result := 0
-	sign := 1
+	sign := 1 // 1 表示正數，-1 表示負數
 	i := 0
+	n := len(s)
 
-	// 32 位整數的範圍
-	const MaxInt = math.MaxInt32 // 2147483647
-	const MinInt = math.MinInt32 // -2147483648
-
-	// 跳過前導空格
-	for i < len(s) && s[i] == ' ' {
+	// 步驟 1：跳過前導空白
+	for i < n && s[i] == ' ' {
 		i++
 	}
 
-	// 處理符號
-	if i < len(s) && (s[i] == '+' || s[i] == '-') {
+	// 處理邊緣情況：字符串全是空白
+	if i == n {
+		return 0
+	}
+
+	// 步驟 2：處理符號
+	if s[i] == '+' || s[i] == '-' {
 		if s[i] == '-' {
 			sign = -1
 		}
 		i++
 	}
 
-	// 處理數字
-	for i < len(s) && s[i] >= '0' && s[i] <= '9' {
+	// 步驟 3：讀取數字並轉換
+	for i < n && s[i] >= '0' && s[i] <= '9' {
+		// 獲取當前數字
 		digit := int(s[i] - '0')
 
-		// 檢查溢出 (分別處理正數和負數的情況)
-		if sign == 1 {
-			if result > MaxInt/10 || (result == MaxInt/10 && digit > MaxInt%10) {
-				return MaxInt
-			}
-		} else {
-			if -result < MinInt/10 || (-result == MinInt/10 && digit > -MinInt%10) {
-				return MinInt
+		// 步驟 4：檢查溢出
+		// 對於正數，如果 result > INT_MAX/10 或者 result == INT_MAX/10 且 digit > 7，將溢出
+		// 對於負數，如果 result > INT_MAX/10 或者 result == INT_MAX/10 且 digit > 8，將溢出
+		if result > IntMax/10 || (result == IntMax/10 && digit > IntMax%10) {
+			if sign == 1 {
+				return IntMax
+			} else {
+				return IntMin
 			}
 		}
 
+		// 更新結果
 		result = result*10 + digit
 		i++
 	}

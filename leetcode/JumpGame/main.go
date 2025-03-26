@@ -4,7 +4,7 @@ func canJump(nums []int) bool {
 	// 數組的長度
 	n := len(nums)
 
-	// 如果數組只有一個元素，我們已經在最後一個位置
+	// 如果數組只有一個元素，已經在最後一個位置
 	if n == 1 {
 		return true
 	}
@@ -14,7 +14,7 @@ func canJump(nums []int) bool {
 
 	// 遍歷數組中的每個元素
 	for i := 0; i < n; i++ {
-		// 如果當前位置已經超出了我們能到達的最遠位置，返回 false
+		// 如果當前位置已經超出了能到達的最遠位置，返回 false
 		if i > maxReach {
 			return false
 		}
