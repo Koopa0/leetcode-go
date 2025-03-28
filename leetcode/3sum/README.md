@@ -1,5 +1,3 @@
-I'll help you solve the 3Sum LeetCode problem following the structure you've provided.
-
 ## 1. Original Problem
 
 ### English
