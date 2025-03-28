@@ -37,11 +37,15 @@ func fourSum(nums []int, target int) [][]int {
 			}
 
 			// 剪枝：判斷最小可能和
+			// 如果最小可能和大於目標值，後面的元素更大，不可能找到解
+			// e.g. [1,2,3,4,5] -> 1+2+3+4=10 > 0
 			if nums[i]+nums[j]+nums[j+1]+nums[j+2] > target {
 				break
 			}
 
 			// 剪枝：判斷最大可能和
+			// 如果最大可能和小於目標值，當前元素太小，嘗試下一個
+			// e.g. [1,2,3,4,5] -> 1+2+4+5=12 < 0
 			if nums[i]+nums[j]+nums[n-2]+nums[n-1] < target {
 				continue
 			}
