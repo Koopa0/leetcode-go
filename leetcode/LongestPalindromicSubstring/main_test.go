@@ -61,7 +61,7 @@ func TestLongestPalindrome(t *testing.T) {
 		{
 			name:        "Palindrome in middle",
 			input:       "xyzracecarzyx",
-			expected:    "racecar",
+			expected:    "xyzracecarzyx",
 			description: "測試回文在字符串中間的情況",
 		},
 		{
