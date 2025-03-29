@@ -10,6 +10,11 @@ func lengthOfLongestSubstring(s string) int {
 	maxLength := 0
 	left := 0
 
+	// 遍歷字符串
+	// e.g. s = "abcabcbb"，right = 0，s[right] = "a"，
+	// charIndex[s[right]] = -1，left = 0，currentLength = 1，maxLength = 1
+	// e.g. s = "abcabcbb"，right = 1，s[right] = "b"，
+	// charIndex[s[right]] = -1，left = 0，currentLength = 2，maxLength = 2
 	for right := 0; right < len(s); right++ {
 		if charIndex[s[right]] >= left {
 			left = charIndex[s[right]] + 1
