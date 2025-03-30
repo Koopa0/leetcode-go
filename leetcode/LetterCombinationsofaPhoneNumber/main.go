@@ -30,7 +30,7 @@ func letterCombinations(digits string) []string {
 		}
 
 		// 獲取當前數字對應的字母
-		// e.g. digits = "23"，index = 0，letters = "abc"
+		// e.g. digits = "23"，index = 0，letters = "abc" digit = '2'
 		// e.g. digits = "23"，index = 1，letters = "def"
 		// e.g. digits = "23"，index = 2，letters = ""
 		digit := digits[index]
