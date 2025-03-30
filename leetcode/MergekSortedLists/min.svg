@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+    <!-- 背景 -->
+    <rect width="800" height="800" fill="#f9f9f9"/>
+
+    <!-- 標題 -->
+    <text x="400" y="40" font-family="Arial" font-size="24" text-anchor="middle" fill="#333">最小堆操作步驟</text>
+
+    <!-- 步驟 1：初始化 -->
+    <g transform="translate(50, 80)">
+        <rect x="0" y="0" width="700" height="100" rx="5" fill="#FFF" stroke="#DDD" stroke-width="1"/>
+        <text x="20" y="30" font-family="Arial" font-size="18" font-weight="bold" fill="#333">步驟 1：初始化最小堆</text>
+
+        <!-- 堆內容 -->
+        <g transform="translate(40, 50)">
+            <!-- 堆中的節點 -->
+            <rect x="0" y="0" width="40" height="40" rx="5" fill="#BBDEFB" stroke="#2196F3" stroke-width="2"/>
+            <text x="20" y="25" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">1</text>
+            <text x="20" y="50" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">L1</text>
+
+            <rect x="60" y="0" width="40" height="40" rx="5" fill="#C8E6C9" stroke="#4CAF50" stroke-width="2"/>
+            <text x="80" y="25" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">1</text>
+            <text x="80" y="50" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">L2</text>
+
+            <rect x="120" y="0" width="40" height="40" rx="5" fill="#FFECB3" stroke="#FFC107" stroke-width="2"/>
+            <text x="140" y="25" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">2</text>
+            <text x="140" y="50" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">L3</text>
+        </g>
+
+        <!-- 結果鏈表 -->
+        <g transform="translate(300, 50)">
+            <text x="0" y="25" font-family="Arial" font-size="16" fill="#333">結果：</text>
+            <text x="50" y="25" font-family="Arial" font-size="16" fill="#333">空</text>
+        </g>
+    </g>
+
+    <!-- 步驟 2：彈出第一個節點 -->
+    <g transform="translate(50, 200)">
+        <rect x="0" y="0" width="700" height="120" rx="5" fill="#FFF" stroke="#DDD" stroke-width="1"/>
+        <text x="20" y="30" font-family="Arial" font-size="18" font-weight="bold" fill="#333">步驟 2：彈出節點 1 (L1)，將 L1 的下一個節點 4 加入堆</text>
+
+        <!-- 堆內容 -->
+        <g transform="translate(40, 60)">
+            <!-- 堆中的節點 -->
+            <rect x="0" y="0" width="40" height="40" rx="5" fill="#C8E6C9" stroke="#4CAF50" stroke-width="2"/>
+            <text x="20" y="25" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">1</text>
+            <text x="20" y="50" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">L2</text>
+
+            <rect x="60" y="0" width="40" height="40" rx="5" fill="#FFECB3" stroke="#FFC107" stroke-width="2"/>
+            <text x="80" y="25" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">2</text>
+            <text x="80" y="50" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">L3</text>
+
+            <rect x="120" y="0" width="40" height="40" rx="5" fill="#BBDEFB" stroke="#2196F3" stroke-width="2"/>
+            <text x="140" y="25" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">4</text>
+            <text x="140" y="50" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">L1</text>
+        </g>
+
+        <!-- 結果鏈表 -->
+        <g transform="translate(300, 60)">
+            <text x="0" y="25" font-family="Arial" font-size="16" fill="#333">結果：</text>
+            <rect x="50" y="5" width="40" height="40" rx="5" fill="#BBDEFB" stroke="#2196F3" stroke-width="2"/>
+            <text x="70" y="30" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">1</text>
+        </g>
+    </g>
+
+    <!-- 步驟 3：彈出第二個節點 -->
+    <g transform="translate(50, 340)">
+        <rect x="0" y="0" width="700" height="120" rx="5" fill="#FFF" stroke="#DDD" stroke-width="1"/>
+        <text x="20" y="30" font-family="Arial" font-size="18" font-weight="bold" fill="#333">步驟 3：彈出節點 1 (L2)，將 L2 的下一個節點 3 加入堆</text>
+
+        <!-- 堆內容 -->
+        <g transform="translate(40, 60)">
+            <!-- 堆中的節點 -->
+            <rect x="0" y="0" width="40" height="40" rx="5" fill="#FFECB3" stroke="#FFC107" stroke-width="2"/>
+            <text x="20" y="25" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">2</text>
+            <text x="20" y="50" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">L3</text>
+
+            <rect x="60" y="0" width="40" height="40" rx="5" fill="#C8E6C9" stroke="#4CAF50" stroke-width="2"/>
+            <text x="80" y="25" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">3</text>
+            <text x="80" y="50" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">L2</text>
+
+            <rect x="120" y="0" width="40" height="40" rx="5" fill="#BBDEFB" stroke="#2196F3" stroke-width="2"/>
+            <text x="140" y="25" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">4</text>
+            <text x="140" y="50" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">L1</text>
+        </g>
+
+        <!-- 結果鏈表 -->
+        <g transform="translate(300, 60)">
+            <text x="0" y="25" font-family="Arial" font-size="16" fill="#333">結果：</text>
+            <rect x="50" y="5" width="40" height="40" rx="5" fill="#BBDEFB" stroke="#2196F3" stroke-width="2"/>
+            <text x="70" y="30" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">1</text>
+            <line x1="90" y1="25" x2="110" y2="25" stroke="#333" stroke-width="2"/>
+            <polygon points="110,25 100,20 100,30" fill="#333"/>
+
+            <rect x="110" y="5" width="40" height="40" rx="5" fill="#C8E6C9" stroke="#4CAF50" stroke-width="2"/>
+            <text x="130" y="30" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">1</text>
+        </g>
+    </g>
+
+    <!-- 步驟 4：彈出第三個節點 -->
+    <g transform="translate(50, 480)">
+        <rect x="0" y="0" width="700" height="120" rx="5" fill="#FFF" stroke="#DDD" stroke-width="1"/>
+        <text x="20" y="30" font-family="Arial" font-size="18" font-weight="bold" fill="#333">步驟 4：彈出節點 2 (L3)，將 L3 的下一個節點 6 加入堆</text>
+
+        <!-- 堆內容 -->
+        <g transform="translate(40, 60)">
+            <!-- 堆中的節點 -->
+            <rect x="0" y="0" width="40" height="40" rx="5" fill="#C8E6C9" stroke="#4CAF50" stroke-width="2"/>
+            <text x="20" y="25" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">3</text>
+            <text x="20" y="50" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">L2</text>
+
+            <rect x="60" y="0" width="40" height="40" rx="5" fill="#BBDEFB" stroke="#2196F3" stroke-width="2"/>
+            <text x="80" y="25" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">4</text>
+            <text x="80" y="50" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">L1</text>
+
+            <rect x="120" y="0" width="40" height="40" rx="5" fill="#FFECB3" stroke="#FFC107" stroke-width="2"/>
+            <text x="140" y="25" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">6</text>
+            <text x="140" y="50" font-family="Arial" font-size="12" text-anchor="middle" fill="#666">L3</text>
+        </g>
+
+        <!-- 結果鏈表 -->
+        <g transform="translate(300, 60)">
+            <text x="0" y="25" font-family="Arial" font-size="16" fill="#333">結果：</text>
+            <rect x="50" y="5" width="40" height="40" rx="5" fill="#BBDEFB" stroke="#2196F3" stroke-width="2"/>
+            <text x="70" y="30" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">1</text>
+            <line x1="90" y1="25" x2="110" y2="25" stroke="#333" stroke-width="2"/>
+            <polygon points="110,25 100,20 100,30" fill="#333"/>
+
+            <rect x="110" y="5" width="40" height="40" rx="5" fill="#C8E6C9" stroke="#4CAF50" stroke-width="2"/>
+            <text x="130" y="30" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">1</text>
+            <line x1="150" y1="25" x2="170" y2="25" stroke="#333" stroke-width="2"/>
+            <polygon points="170,25 160,20 160,30" fill="#333"/>
+
+            <rect x="170" y="5" width="40" height="40" rx="5" fill="#FFECB3" stroke="#FFC107" stroke-width="2"/>
+            <text x="190" y="30" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">2</text>
+        </g>
+    </g>
+
+    <!-- 繼續下一步 -->
+    <g transform="translate(50, 620)">
+        <rect x="0" y="0" width="700" height="120" rx="5" fill="#FFF" stroke="#DDD" stroke-width="1"/>
+        <text x="20" y="30" font-family="Arial" font-size="18" font-weight="bold" fill="#333">繼續操作直到堆為空</text>
+        <text x="40" y="70" font-family="Arial" font-size="16" fill="#555">按此流程繼續操作，依次彈出：3(L2) → 4(L1) → 4(L2) → 5(L1) → 6(L3)</text>
+        <text x="40" y="100" font-family="Arial" font-size="16" fill="#555">最終形成完整的合併排序鏈表：1→1→2→3→4→4→5→6</text>
+    </g>
+</svg>
