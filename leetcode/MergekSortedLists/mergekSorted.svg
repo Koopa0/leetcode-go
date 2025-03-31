@@ -68,13 +68,13 @@
 
         <!-- 堆的示意圖 -->
         <g transform="translate(50, 130)">
-            <rect x="0" y="0" width="60" height="60" rx="5" fill="#BBDEFB" stroke="#2196F3" stroke-width="2"/>
-            <text x="30" y="35" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">1</text>
-            <text x="65" y="20" font-family="Arial" font-size="12" fill="#777">(L1)</text>
+            <rect x="-40" y="0" width="60" height="60" rx="5" fill="#BBDEFB" stroke="#2196F3" stroke-width="2"/>
+            <text x="-10" y="35" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">1</text>
+            <text x="25" y="20" font-family="Arial" font-size="12" fill="#777">(L1)</text>
 
-            <rect x="80" y="0" width="60" height="60" rx="5" fill="#C8E6C9" stroke="#4CAF50" stroke-width="2"/>
-            <text x="110" y="35" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">1</text>
-            <text x="145" y="20" font-family="Arial" font-size="12" fill="#777">(L2)</text>
+            <rect x="60" y="0" width="60" height="60" rx="5" fill="#C8E6C9" stroke="#4CAF50" stroke-width="2"/>
+            <text x="90" y="35" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">1</text>
+            <text x="125" y="20" font-family="Arial" font-size="12" fill="#777">(L2)</text>
 
             <rect x="160" y="0" width="60" height="60" rx="5" fill="#FFECB3" stroke="#FFC107" stroke-width="2"/>
             <text x="190" y="35" font-family="Arial" font-size="16" text-anchor="middle" fill="#333">2</text>

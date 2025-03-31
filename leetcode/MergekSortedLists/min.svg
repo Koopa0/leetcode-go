@@ -7,7 +7,7 @@
 
     <!-- 步驟 1：初始化 -->
     <g transform="translate(50, 80)">
-        <rect x="0" y="0" width="700" height="100" rx="5" fill="#FFF" stroke="#DDD" stroke-width="1"/>
+        <rect x="0" y="0" width="700" height="105" rx="5" fill="#FFF" stroke="#DDD" stroke-width="1"/>
         <text x="20" y="30" font-family="Arial" font-size="18" font-weight="bold" fill="#333">步驟 1：初始化最小堆</text>
 
         <!-- 堆內容 -->
