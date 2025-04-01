@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+    <!-- Original Linked List -->
+    <text x="50" y="50" font-family="Arial" font-size="16" fill="#333">原始鏈表：</text>
+
+    <!-- Nodes -->
+    <circle cx="100" cy="100" r="20" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+    <circle cx="200" cy="100" r="20" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+    <circle cx="300" cy="100" r="20" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+    <circle cx="400" cy="100" r="20" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+    <circle cx="500" cy="100" r="20" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+
+    <!-- Node Values -->
+    <text x="100" y="105" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">1</text>
+    <text x="200" y="105" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">2</text>
+    <text x="300" y="105" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">3</text>
+    <text x="400" y="105" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">4</text>
+    <text x="500" y="105" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">5</text>
+
+    <!-- Arrows -->
+    <path d="M120 100 L180 100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <path d="M220 100 L280 100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <path d="M320 100 L380 100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <path d="M420 100 L480 100" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <!-- K-Groups -->
+    <rect x="80" y="70" width="140" height="60" fill="none" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="5,5" rx="10"/>
+    <rect x="280" y="70" width="140" height="60" fill="none" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="5,5" rx="10"/>
+    <rect x="480" y="70" width="40" height="60" fill="none" stroke="#4ecdc4" stroke-width="2" stroke-dasharray="5,5" rx="10"/>
+
+    <text x="150" y="150" font-family="Arial" font-size="14" fill="#ff6b6b" text-anchor="middle">第一組 (k=2)</text>
+    <text x="350" y="150" font-family="Arial" font-size="14" fill="#ff6b6b" text-anchor="middle">第二組 (k=2)</text>
+    <text x="500" y="150" font-family="Arial" font-size="14" fill="#4ecdc4" text-anchor="middle">剩餘節點</text>
+
+    <!-- Step 1: Reverse First Group -->
+    <text x="50" y="200" font-family="Arial" font-size="16" fill="#333">步驟 1：翻轉第一組</text>
+
+    <!-- Nodes -->
+    <circle cx="100" cy="250" r="20" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+    <circle cx="200" cy="250" r="20" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+    <circle cx="300" cy="250" r="20" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+    <circle cx="400" cy="250" r="20" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+    <circle cx="500" cy="250" r="20" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+
+    <!-- Node Values -->
+    <text x="100" y="255" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">1</text>
+    <text x="200" y="255" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">2</text>
+    <text x="300" y="255" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">3</text>
+    <text x="400" y="255" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">4</text>
+    <text x="500" y="255" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">5</text>
+
+    <!-- Arrows -->
+    <path d="M180 250 L120 250" stroke="#ff6b6b" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <path d="M120 250 L280 250" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" stroke-dasharray="5,3"/>
+    <path d="M320 250 L380 250" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <path d="M420 250 L480 250" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+    <!-- Step 2: Reverse Second Group -->
+    <text x="50" y="350" font-family="Arial" font-size="16" fill="#333">步驟 2：翻轉第二組</text>
+
+    <!-- Nodes -->
+    <circle cx="100" cy="400" r="20" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+    <circle cx="200" cy="400" r="20" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+    <circle cx="300" cy="400" r="20" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+    <circle cx="400" cy="400" r="20" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+    <circle cx="500" cy="400" r="20" fill="#f0f0f0" stroke="#333" stroke-width="2"/>
+
+    <!-- Node Values -->
+    <text x="100" y="405" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">1</text>
+    <text x="200" y="405" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">2</text>
+    <text x="300" y="405" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">3</text>
+    <text x="400" y="405" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">4</text>
+    <text x="500" y="405" font-family="Arial" font-size="16" fill="#333" text-anchor="middle">5</text>
+
+    <!-- Arrows -->
+    <path d="M180 400 L120 400" stroke="#ff6b6b" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <path d="M200 400 L280 400" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <path d="M380 400 L320 400" stroke="#ff6b6b" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <path d="M300 400 L480 400" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)" stroke-dasharray="5,3"/>
+
+    <!-- Final Result -->
+    <text x="50" y="470" font-family="Arial" font-size="16" fill="#333">最終結果：[2,1,4,3,5]</text>
+
+    <!-- ArrowHead Marker -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+        </marker>
+    </defs>
+</svg>
