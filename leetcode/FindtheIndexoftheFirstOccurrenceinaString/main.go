@@ -19,7 +19,7 @@ func strStr(haystack string, needle string) int {
 	next := make([]int, m)
 
 	// 初始化
-	next[0] = 0
+	//next[0] = 0
 
 	// 填充 next 數組
 	for i, j := 1, 0; i < m; {
