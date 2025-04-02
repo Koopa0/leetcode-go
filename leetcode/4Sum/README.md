@@ -1,5 +1,3 @@
-I'll help you solve the 4Sum problem following your comprehensive structure. Let's break it down step by step.
-
 ## 1. Original Problem:
 
 ### English
