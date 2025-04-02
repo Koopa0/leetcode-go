@@ -1,5 +1,3 @@
-I'd be happy to help you solve the "Find the Index of the First Occurrence in a String" LeetCode problem following the comprehensive structure you've requested. Let's start by analyzing and solving this problem step by step.
-
 ## 1. Original Problem
 
 ### English Version
