@@ -1,7 +1,7 @@
 package ValidSudoku
 
 func isValidSudoku(board [][]byte) bool {
-	// 初始化映射來跟踪已見數字
+	// 初始化映射來跟蹤已見數字
 	rows := make([]map[byte]bool, 9)
 	cols := make([]map[byte]bool, 9)
 	boxes := make([]map[byte]bool, 9)

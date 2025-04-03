@@ -102,7 +102,7 @@ Given a string containing just the characters '(' and ')', find the length of th
         - 如果是，dp[i] = dp[i-1] + 2 + dp[i-2-dp[i-1]]（如果 i-2-dp[i-1] ≥ 0）
 
 ### 方法三：堆疊法
-使用堆疊來跟踪括號的配對情況。遍歷字符串，對於：
+使用堆疊來跟蹤括號的配對情況。遍歷字符串，對於：
 - '('：將索引推入堆疊
 - ')'：彈出堆疊頂部元素，如果堆疊為空，將當前索引推入；否則，計算當前索引與堆疊頂部元素之間的距離作為有效括號的長度
 
@@ -200,7 +200,7 @@ func longestValidParentheses(s string) int {
 
 ## 8. 實現執行演示
 
-讓我們使用示例 ")()())" 逐步執行上面的代碼：
+讓我們使用示例 ")()())" 逐步執行上面的程式碼：
 
 ```
 初始化：stack = [-1], maxLength = 0

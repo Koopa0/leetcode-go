@@ -32,7 +32,7 @@ If all assertions pass, then your solution will be accepted.
 
 判題標準：
 
-系統會用下面的代碼來測試你的解：
+系統會用下面的程式碼來測試你的解：
 ```
 int[] nums = [...]; // 輸入數組
 int[] expectedNums = [...]; // 長度正確的期望答案

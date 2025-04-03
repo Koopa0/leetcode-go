@@ -183,7 +183,7 @@ Output: ["a","b","c"]
 var backtrack func(index int, current string)
 ```
 
-這行代碼聲明了一個名為 `backtrack` 的函數變量，它接受兩個參數：
+這行程式碼聲明了一個名為 `backtrack` 的函數變量，它接受兩個參數：
 - `index`：當前處理到輸入字符串的第幾個數字（索引）
 - `current`：到目前為止已經形成的字母組合
 

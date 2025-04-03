@@ -257,7 +257,7 @@ func searchInsert(nums []int, target int) int {
 
 # 9. 實現執行演算
 
-讓我們再次使用例子 `nums = [1,3,5,6]`, `target = 2` 來追蹤代碼的執行過程：
+讓我們再次使用例子 `nums = [1,3,5,6]`, `target = 2` 來追蹤程式碼的執行過程：
 
 **初始化**:
 - `left = 0, right = 3`

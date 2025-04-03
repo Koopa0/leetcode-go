@@ -151,7 +151,7 @@ Explanation: There is no common prefix among the input strings.
 ## 8. 優化與改進:
 
 **當前解決方案的優點:**
-- 代碼簡潔易懂
+- 程式碼簡潔易懂
 - 在大多數情況下效率較高，特別是當公共前綴短或不存在時
 - 無需額外空間
 

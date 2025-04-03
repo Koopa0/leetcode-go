@@ -542,7 +542,7 @@ nums2 = [7, 11, 18, 19] (n = 4)
 - 如果 i = m，表示 nums1 的所有元素都在左半部分
 - 此時右半部分的最小值就是 nums2[j]
 
-## 11. 完整代碼解析，著重思路
+## 11. 完整程式碼解析，著重思路
 
 ```go
 func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {

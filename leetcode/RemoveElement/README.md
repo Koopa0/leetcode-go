@@ -59,7 +59,7 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 **自定義評判：**
 
-評判將使用以下代碼測試您的解決方案：
+評判將使用以下程式碼測試您的解決方案：
 ```
 int[] nums = [...]; // 輸入數組
 int val = ...; // 需要移除的值

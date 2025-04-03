@@ -21,7 +21,7 @@ func swapPairs(head *ListNode) *ListNode {
 	// 啞節點可以幫助我們統一處理頭節點和其他節點
 	dummy := &ListNode{Next: head}
 
-	// prev 指針用於跟踪當前處理的一對節點之前的節點
+	// prev 指針用於跟蹤當前處理的一對節點之前的節點
 	prev := dummy
 
 	// 當還有至少兩個節點可以交換時，繼續循環
