@@ -15,7 +15,7 @@ func strStr(haystack string, needle string) int {
 	}
 
 	// 構建部分匹配表（PMT）
-	// next[i] 表示 needle[0...i] 的最長相同前綴後綴長度
+	// next[i] 表示 needle[0...i] 的最長相L同前綴後綴長度
 	next := make([]int, m)
 
 	// 初始化

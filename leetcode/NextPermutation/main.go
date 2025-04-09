@@ -33,7 +33,7 @@ func nextPermutation(nums []int) {
 	reverse(nums, i+1, n-1)
 }
 
-// reverse 反轉數組中指定範圍的元素
+// // reverse 反轉數組中指定範圍的元素
 func reverse(nums []int, start, end int) {
 	for start < end {
 		nums[start], nums[end] = nums[end], nums[start]

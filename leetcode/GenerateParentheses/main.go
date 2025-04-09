@@ -2,6 +2,7 @@ package GenerateParentheses
 
 // generateParenthesis 生成所有可能的有效括號組合
 func generateParenthesis(n int) []string {
+
 	// 存儲結果的切片
 	result := []string{}
 

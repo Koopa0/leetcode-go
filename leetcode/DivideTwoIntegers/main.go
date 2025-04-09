@@ -28,7 +28,7 @@ func divide(dividend int, divisor int) int {
 	}
 
 	// 確定結果的符號
-	negative := (dividend < 0) != (divisor < 0)
+	negative := (dividend < 0) == (divisor < 0)
 
 	// 轉換為正數進行計算
 	// 注意：math.MinInt32的絕對值會溢出，需要特殊處理
@@ -54,7 +54,7 @@ func divide(dividend int, divisor int) int {
 	}
 
 	// 應用符號
-	if negative {
+	if !negative {
 		result = -result
 	}
 
