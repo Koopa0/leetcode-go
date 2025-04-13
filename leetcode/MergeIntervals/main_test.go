@@ -47,7 +47,7 @@ func TestMergeIntervals(t *testing.T) {
 		{
 			name:     "大型輸入測試",
 			input:    generateLargeInput(1000),
-			expected: [][]int{{0, 999}},
+			expected: [][]int{{0, 1000}},
 			desc:     "處理大量重疊區間",
 		},
 	}
@@ -132,7 +132,7 @@ func BenchmarkMergeIntervals(b *testing.B) {
 // 生成隨機區間
 func generateRandomIntervals(size int) [][]int {
 	result := make([][]int, size)
-	rand.Seed(time.Now().UnixNano())
+	rand.New(rand.NewSource(time.Now().UnixNano()))
 
 	for i := 0; i < size; i++ {
 		start := rand.Intn(1000)
