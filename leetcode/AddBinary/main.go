@@ -53,10 +53,7 @@ func addBinary(a string, b string) string {
 	lenA, lenB := len(a), len(b)
 
 	// 2. 確定結果的最大長度（較長輸入的長度加1）
-	maxLen := lenA
-	if lenB > maxLen {
-		maxLen = lenB
-	}
+	maxLen := max(lenA, lenB)
 	maxLen++ // 考慮可能的進位
 
 	// 3. 創建結果陣列
