@@ -63,7 +63,7 @@ func subsetsBitmask(nums []int) [][]int {
 // 迭代增量法解決方案
 func subsetsIterative(nums []int) [][]int {
 	// 初始化結果為只包含空集的列表
-	result := [][]int{[]int{}}
+	result := [][]int{{}}
 
 	// 對於 nums 中的每個元素
 	for _, num := range nums {
