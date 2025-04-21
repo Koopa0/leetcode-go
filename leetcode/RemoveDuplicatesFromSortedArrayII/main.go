@@ -1,4 +1,4 @@
-package RemoveDuplicatesfromSortedArrayII
+package RemoveDuplicatesFromSortedArrayII
 
 // 暴力解法
 func removeDuplicatesBruteForce(nums []int) int {

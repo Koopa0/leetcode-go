@@ -1,4 +1,4 @@
-package RemoveDuplicatesfromSortedArray
+package RemoveDuplicatesFromSortedArray
 
 import "testing"
 

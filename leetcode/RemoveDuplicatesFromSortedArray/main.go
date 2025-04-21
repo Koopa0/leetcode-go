@@ -1,4 +1,4 @@
-package RemoveDuplicatesfromSortedArray
+package RemoveDuplicatesFromSortedArray
 
 func removeDuplicates(nums []int) int {
 	// 處理邊界情況
