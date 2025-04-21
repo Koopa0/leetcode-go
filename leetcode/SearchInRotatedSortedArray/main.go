@@ -1,4 +1,4 @@
-package SearchinRotatedSortedArray
+package SearchInRotatedSortedArray
 
 func search(nums []int, target int) int {
 	// 初始化左右指針
