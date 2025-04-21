@@ -1,4 +1,4 @@
-package RemoveNthNodeFromEndofList
+package RemoveNthNodeFromEndOfList
 
 /**
  * Definition for singly-linked list.
