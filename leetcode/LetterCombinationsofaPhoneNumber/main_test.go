@@ -12,7 +12,7 @@ func TestLetterCombinations(t *testing.T) {
 		expected []string
 	}{
 		{
-			name:     "空字符串",
+			name:     "空字串",
 			digits:   "",
 			expected: []string{},
 		},

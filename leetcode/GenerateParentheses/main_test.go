@@ -43,7 +43,7 @@ func TestGenerateParenthesis(t *testing.T) {
 	}
 }
 
-// areEqualSets 檢查兩個字符串集合是否包含相同的元素（不考慮順序）
+// areEqualSets 檢查兩個字串集合是否包含相同的元素（不考慮順序）
 func areEqualSets(a, b []string) bool {
 	if len(a) != len(b) {
 		return false

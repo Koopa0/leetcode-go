@@ -16,7 +16,7 @@ func myAtoi(s string) int {
 		i++
 	}
 
-	// 處理邊緣情況：字符串全是空白
+	// 處理邊緣情況：字串全是空白
 	if i == n {
 		return 0
 	}

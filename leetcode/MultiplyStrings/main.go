@@ -29,7 +29,7 @@ func multiply(num1 string, num2 string) string {
 		}
 	}
 
-	// 構建結果字符串
+	// 構建結果字串
 	var sb strings.Builder
 	for _, digit := range result {
 		// 跳過前導零

@@ -36,11 +36,11 @@ func TestFindSubstring(t *testing.T) {
 			desc:     "測試多個匹配",
 		},
 		{
-			name:     "空字符串",
+			name:     "空字串",
 			s:        "",
 			words:    []string{"foo", "bar"},
 			expected: []int{},
-			desc:     "測試空字符串邊界情況",
+			desc:     "測試空字串邊界情況",
 		},
 		{
 			name:     "空單詞數組",
@@ -57,18 +57,18 @@ func TestFindSubstring(t *testing.T) {
 			desc:     "測試包含重複單詞的情況",
 		},
 		{
-			name:     "字符串長度剛好",
+			name:     "字串長度剛好",
 			s:        "foobar",
 			words:    []string{"foo", "bar"},
 			expected: []int{0},
-			desc:     "測試字符串長度剛好等於所有單詞長度的情況",
+			desc:     "測試字串長度剛好等於所有單詞長度的情況",
 		},
 		{
-			name:     "字符串長度不夠",
+			name:     "字串長度不夠",
 			s:        "foo",
 			words:    []string{"foo", "bar"},
 			expected: []int{},
-			desc:     "測試字符串長度不夠的情況",
+			desc:     "測試字串長度不夠的情況",
 		},
 		{
 			name:     "大量重複單詞",

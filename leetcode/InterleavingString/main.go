@@ -10,18 +10,18 @@ func isInterleaveBruteForce(s1 string, s2 string, s3 string) bool {
 	// 遞迴輔助函數
 	var dfs func(i, j, k int) bool
 	dfs = func(i, j, k int) bool {
-		// 基本情況：所有字符都已匹配
+		// 基本情況：所有字都已匹配
 		if k == len(s3) {
 			return i == len(s1) && j == len(s2)
 		}
 
-		// 檢查是否可以從s1取字符
+		// 檢查是否可以從s1取字
 		var result bool = false
 		if i < len(s1) && s1[i] == s3[k] {
 			result = dfs(i+1, j, k+1)
 		}
 
-		// 如果從s1取字符不行，嘗試從s2取字符
+		// 如果從s1取字不行，嘗試從s2取字
 		if !result && j < len(s2) && s2[j] == s3[k] {
 			result = dfs(i, j+1, k+1)
 		}
@@ -51,7 +51,7 @@ func isInterleaveOptimized(s1 string, s2 string, s3 string) bool {
 	// 遞迴輔助函數
 	var dfs func(i, j, k int) bool
 	dfs = func(i, j, k int) bool {
-		// 基本情況：所有字符都已匹配
+		// 基本情況：所有字都已匹配
 		if k == len(s3) {
 			return i == len(s1) && j == len(s2)
 		}
@@ -64,12 +64,12 @@ func isInterleaveOptimized(s1 string, s2 string, s3 string) bool {
 		// 初始化結果
 		result := false
 
-		// 嘗試從s1取字符
+		// 嘗試從s1取字
 		if i < len(s1) && s1[i] == s3[k] {
 			result = dfs(i+1, j, k+1)
 		}
 
-		// 如果從s1取字符不行，嘗試從s2取字符
+		// 如果從s1取字不行，嘗試從s2取字
 		if !result && j < len(s2) && s2[j] == s3[k] {
 			result = dfs(i, j+1, k+1)
 		}
@@ -101,15 +101,15 @@ func isInterleaveDP(s1 string, s2 string, s3 string) bool {
 		dp[i] = make([]bool, n+1)
 	}
 
-	// 初始化：空字符串可以交錯形成空字符串
+	// 初始化：空字串可以交錯形成空字串
 	dp[0][0] = true
 
-	// 填充第一行：s1的前i個字符是否能交錯形成s3的前i個字符
+	// 填充第一行：s1的前i個字是否能交錯形成s3的前i個字
 	for i := 1; i <= m; i++ {
 		dp[i][0] = dp[i-1][0] && s1[i-1] == s3[i-1]
 	}
 
-	// 填充第一列：s2的前j個字符是否能交錯形成s3的前j個字符
+	// 填充第一列：s2的前j個字是否能交錯形成s3的前j個字
 	for j := 1; j <= n; j++ {
 		dp[0][j] = dp[0][j-1] && s2[j-1] == s3[j-1]
 	}
@@ -117,10 +117,10 @@ func isInterleaveDP(s1 string, s2 string, s3 string) bool {
 	// 填充其餘單元格
 	for i := 1; i <= m; i++ {
 		for j := 1; j <= n; j++ {
-			// 當前位置的s3字符索引
+			// 當前位置的s3字索引
 			k := i + j - 1
 
-			// 從s1取字符或從s2取字符
+			// 從s1取字或從s2取字
 			dp[i][j] = (dp[i-1][j] && s1[i-1] == s3[k]) ||
 				(dp[i][j-1] && s2[j-1] == s3[k])
 		}

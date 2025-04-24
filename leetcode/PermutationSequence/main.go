@@ -24,7 +24,7 @@ func bruteForceSolution(n int, k int) string {
 // 生成所有排列的輔助函數
 func generatePermutations(nums []int, index int, result *[]string) {
 	if index == len(nums) {
-		// 將當前排列轉換為字符串
+		// 將當前排列轉換為字串
 		var sb strings.Builder
 		for _, num := range nums {
 			sb.WriteRune(rune('0' + num))

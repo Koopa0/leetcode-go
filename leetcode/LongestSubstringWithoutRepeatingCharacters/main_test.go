@@ -19,7 +19,7 @@ func TestLengthOfLongestSubstring(t *testing.T) {
 			name:     "Example 2",
 			input:    "bbbbb",
 			expected: 1,
-			desc:     "測試所有字符都相同的情況",
+			desc:     "測試所有字都相同的情況",
 		},
 		{
 			name:     "Example 3",
@@ -37,13 +37,13 @@ func TestLengthOfLongestSubstring(t *testing.T) {
 			name:     "Single Character",
 			input:    "a",
 			expected: 1,
-			desc:     "測試只有一個字符的字串",
+			desc:     "測試只有一個字的字串",
 		},
 		{
 			name:     "All Unique Characters",
 			input:    "abcdefg",
 			expected: 7,
-			desc:     "測試所有字符都不重複的情況",
+			desc:     "測試所有字都不重複的情況",
 		},
 		{
 			name:     "With Spaces",

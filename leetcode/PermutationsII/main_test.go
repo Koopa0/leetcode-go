@@ -97,7 +97,7 @@ func comparePermutations(actual, expected [][]int) bool {
 		return false
 	}
 
-	// 將排列轉換為字符串以便比較
+	// 將排列轉換為字串以便比較
 	actualMap := make(map[string]bool)
 	for _, perm := range actual {
 		key := fmt.Sprintf("%v", perm)

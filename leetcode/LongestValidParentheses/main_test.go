@@ -22,7 +22,7 @@ func TestLongestValidParentheses(t *testing.T) {
 			expected: 4,
 		},
 		{
-			name:     "空字符串",
+			name:     "空字串",
 			input:    "",
 			expected: 0,
 		},
@@ -47,7 +47,7 @@ func TestLongestValidParentheses(t *testing.T) {
 			expected: 6,
 		},
 		{
-			name:     "長字符串",
+			name:     "長字串",
 			input:    strings.Repeat("()", 15000),
 			expected: 30000,
 		},

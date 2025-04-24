@@ -20,19 +20,19 @@ func restoreIpAddresses(s string) []string {
 
 // 回溯函數
 func backtrack(s string, index int, count int, current string, result *[]string) {
-	// 如果已經找到 4 個部分且用完所有字符
+	// 如果已經找到 4 個部分且用完所有字
 	if count == 4 && index == len(s) {
 		// 去掉最後多餘的點
 		*result = append(*result, current[:len(current)-1])
 		return
 	}
 
-	// 如果已經有 4 個部分但還有剩餘字符，或字符用完但還未形成 4 個部分
+	// 如果已經有 4 個部分但還有剩餘字，或字用完但還未形成 4 個部分
 	if count == 4 || index == len(s) {
 		return
 	}
 
-	// 嘗試從當前位置取 1、2 或 3 個字符
+	// 嘗試從當前位置取 1、2 或 3 個字
 	for i := 1; i <= 3 && index+i <= len(s); i++ {
 		// 取出長度為 i 的部分
 		part := s[index : index+i]

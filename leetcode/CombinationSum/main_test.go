@@ -72,7 +72,7 @@ func compareNestedSlices(a, b [][]int) bool {
 		return false
 	}
 
-	// 將每個組合轉換為字符串，用於比較
+	// 將每個組合轉換為字串，用於比較
 	mapA := make(map[string]bool)
 	for _, combo := range a {
 		sort.Ints(combo) // 確保順序一致
@@ -92,7 +92,7 @@ func compareNestedSlices(a, b [][]int) bool {
 	return true
 }
 
-// 將整數切片轉換為字符串
+// 將整數切片轉換為字串
 func sliceToString(slice []int) string {
 	var builder strings.Builder
 	for _, num := range slice {

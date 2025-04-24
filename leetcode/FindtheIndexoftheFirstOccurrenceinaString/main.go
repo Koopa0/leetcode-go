@@ -1,7 +1,7 @@
 package FindtheIndexoftheFirstOccurrenceinaString
 
 func strStr(haystack string, needle string) int {
-	// 獲取兩個字符串的長度
+	// 獲取兩個字串的長度
 	n, m := len(haystack), len(needle)
 
 	// 如果 needle 為空，返回 0（題目約束已確保 needle 不為空）
@@ -48,7 +48,7 @@ func strStr(haystack string, needle string) int {
 			// 部分匹配失敗，使用 next 數組回退
 			j = next[j-1]
 		} else {
-			// 第一個字符就不匹配，直接往前移動
+			// 第一個字就不匹配，直接往前移動
 			i++
 		}
 	}

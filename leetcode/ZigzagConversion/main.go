@@ -20,7 +20,7 @@ func convert(s string, numRows int) string {
 	// 計算曲折模式的週期長度
 	cycleLen := 2 * (numRows - 1)
 
-	// 遍歷原始字串的每個字符
+	// 遍歷原始字串的每個字
 	for i := 0; i < len(s); i++ {
 		position := i % cycleLen
 		if position < numRows {

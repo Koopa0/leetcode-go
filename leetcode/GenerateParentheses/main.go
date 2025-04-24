@@ -14,12 +14,12 @@ func generateParenthesis(n int) []string {
 
 // backtrack 使用回溯法生成有效括號組合
 // result: 存儲最終結果的切片的指針
-// current: 當前構建的字符串
+// current: 當前構建的字串
 // open: 當前已使用的左括號數量
 // close: 當前已使用的右括號數量
 // max: 括號對數 n
 func backtrack(result *[]string, current string, open, close, max int) {
-	// 基本情況：如果當前字符串長度為 2*max，說明我們已經構建了一個完整的有效組合
+	// 基本情況：如果當前字串長度為 2*max，說明我們已經構建了一個完整的有效組合
 	if len(current) == 2*max {
 		*result = append(*result, current) // 將當前組合添加到結果中
 		return

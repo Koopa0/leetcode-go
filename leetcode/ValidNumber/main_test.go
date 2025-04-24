@@ -16,8 +16,8 @@ func TestIsNumber(t *testing.T) {
 		{"Valid Complex", "-123.456e789", true, "複雜有效數字測試"},
 
 		// 邊緣情況測試
-		{"Empty String", "", false, "空字符串應該無效"},
-		{"Only Sign", "+", false, "只有符號字符應該無效"},
+		{"Empty String", "", false, "空字串應該無效"},
+		{"Only Sign", "+", false, "只有符號字應該無效"},
 		{"Only Dot", ".", false, "只有小數點應該無效"},
 		{"Only E", "e", false, "只有e應該無效"},
 
@@ -28,7 +28,7 @@ func TestIsNumber(t *testing.T) {
 
 		// 無效輸入測試
 		{"Invalid Character", "abc", false, "含有字母的無效輸入"},
-		{"Invalid Format", "1a", false, "數字後跟隨無效字符"},
+		{"Invalid Format", "1a", false, "數字後跟隨無效字"},
 		{"Invalid E Format", "1e", false, "e後沒有數字的無效格式"},
 		{"Invalid Double Sign", "--6", false, "連續符號的無效格式"},
 		{"Invalid E Decimal", "99e2.5", false, "e後接小數的無效格式"},

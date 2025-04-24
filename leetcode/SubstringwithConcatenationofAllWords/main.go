@@ -23,7 +23,7 @@ func findSubstring(s string, words []string) []int {
 	}
 
 	for i := 0; i < wordLen; i++ {
-		// 提前終止條件：剩餘字符串長度不足
+		// 提前終止條件：剩餘字串長度不足
 		if i+totalLen > len(s) {
 			break
 		}

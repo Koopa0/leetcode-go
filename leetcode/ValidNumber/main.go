@@ -32,7 +32,7 @@ func isNumberFSM(s string) bool {
 		case 'e', 'E':
 			targetState = 3
 		default:
-			return false // 不合法字符
+			return false // 不合法字
 		}
 
 		// 獲取下一個狀態
@@ -75,7 +75,7 @@ func isNumberLinear(s string) bool {
 				return false // 符號只能出現在開頭或e/E後
 			}
 		default:
-			return false // 不合法字符
+			return false // 不合法字
 		}
 	}
 
@@ -90,6 +90,6 @@ func isNumber(s string) bool {
 	// 編譯正則表達式
 	re := regexp.MustCompile(pattern)
 
-	// 匹配字符串
+	// 匹配字串
 	return re.MatchString(s)
 }

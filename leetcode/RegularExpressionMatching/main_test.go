@@ -15,37 +15,37 @@ func TestIsMatch(t *testing.T) {
 	}{
 		// 基本功能測試
 		{
-			name:     "基本匹配 - 無特殊字符",
+			name:     "基本匹配 - 無特殊字",
 			s:        "abc",
 			p:        "abc",
 			expected: true,
-			desc:     "測試基本字符串匹配，無特殊字符",
+			desc:     "測試基本字串匹配，無特殊字",
 		},
 		{
-			name:     "基本不匹配 - 無特殊字符",
+			name:     "基本不匹配 - 無特殊字",
 			s:        "abc",
 			p:        "abd",
 			expected: false,
-			desc:     "測試基本字符串不匹配",
+			desc:     "測試基本字串不匹配",
 		},
 
-		// '.' 字符測試
+		// '.' 字測試
 		{
-			name:     "點匹配單個字符",
+			name:     "點匹配單個字",
 			s:        "abc",
 			p:        "a.c",
 			expected: true,
-			desc:     "測試 '.' 匹配任意單個字符",
+			desc:     "測試 '.' 匹配任意單個字",
 		},
 		{
 			name:     "多個點匹配",
 			s:        "abc",
 			p:        "...",
 			expected: true,
-			desc:     "測試多個 '.' 匹配多個字符",
+			desc:     "測試多個 '.' 匹配多個字",
 		},
 
-		// '*' 字符測試
+		// '*' 字測試
 		{
 			name:     "*匹配零次",
 			s:        "abc",
@@ -74,7 +74,7 @@ func TestIsMatch(t *testing.T) {
 			s:        "abcdefg",
 			p:        "a.*g",
 			expected: true,
-			desc:     "測試 '.*' 組合匹配任意字符序列",
+			desc:     "測試 '.*' 組合匹配任意字序列",
 		},
 		{
 			name:     "複雜組合測試1",
@@ -93,41 +93,41 @@ func TestIsMatch(t *testing.T) {
 
 		// 邊界情況
 		{
-			name:     "空字符串匹配",
+			name:     "空字串匹配",
 			s:        "",
 			p:        "",
 			expected: true,
-			desc:     "測試空字符串匹配空模式",
+			desc:     "測試空字串匹配空模式",
 		},
 		{
-			name:     "空字符串匹配星號模式",
+			name:     "空字串匹配星號模式",
 			s:        "",
 			p:        "a*",
 			expected: true,
-			desc:     "測試空字符串匹配包含 '*' 的模式",
+			desc:     "測試空字串匹配包含 '*' 的模式",
 		},
 		{
-			name:     "空字符串匹配複雜星號模式",
+			name:     "空字串匹配複雜星號模式",
 			s:        "",
 			p:        "a*b*c*",
 			expected: true,
-			desc:     "測試空字符串匹配複雜的 '*' 模式",
+			desc:     "測試空字串匹配複雜的 '*' 模式",
 		},
 		{
-			name:     "空模式匹配非空字符串",
+			name:     "空模式匹配非空字串",
 			s:        "abc",
 			p:        "",
 			expected: false,
-			desc:     "測試空模式匹配非空字符串",
+			desc:     "測試空模式匹配非空字串",
 		},
 
 		// 極端情況
 		{
-			name:     "長字符串匹配",
+			name:     "長字串匹配",
 			s:        "aaaaaaaaaaaaaaaaaaab",
 			p:        "a*a*a*a*a*a*a*a*a*a*c",
 			expected: false,
-			desc:     "測試長字符串匹配長模式",
+			desc:     "測試長字串匹配長模式",
 		},
 		{
 			name:     "以星號結尾",
@@ -159,9 +159,9 @@ func BenchmarkIsMatch(b *testing.B) {
 		s    string
 		p    string
 	}{
-		{"短字符串", "abc", "a.c"},
-		{"中等字符串", "aabcbcbcbc", "a*b*c*b*c*"},
-		{"長字符串", "aaaaaaaaaaaaaaaaaaab", "a*a*a*a*a*a*a*a*a*a*b"},
+		{"短字串", "abc", "a.c"},
+		{"中等字串", "aabcbcbcbc", "a*b*c*b*c*"},
+		{"長字串", "aaaaaaaaaaaaaaaaaaab", "a*a*a*a*a*a*a*a*a*a*b"},
 	}
 
 	// 運行基準測試

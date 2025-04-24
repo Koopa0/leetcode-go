@@ -36,7 +36,7 @@ func TestIsPalindrome(t *testing.T) {
 			expected: true,
 		},
 		{
-			name:     "只有一個字符",
+			name:     "只有一個字",
 			input:    "a",
 			expected: true,
 		},
@@ -108,7 +108,7 @@ func TestIsAlphanumeric(t *testing.T) {
 		{"數字", '9', true},
 		{"空格", ' ', false},
 		{"標點符號", '.', false},
-		{"特殊字符", '*', false},
+		{"特殊字", '*', false},
 	}
 
 	for _, tc := range tests {

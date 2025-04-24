@@ -43,7 +43,7 @@ func TestGroupAnagrams(t *testing.T) {
 			expected: [][]string{},
 		},
 		{
-			name:     "長字符串",
+			name:     "長字串",
 			input:    []string{"aaaaaaaaaa", "aaaaaaaaaa"},
 			expected: [][]string{{"aaaaaaaaaa", "aaaaaaaaaa"}},
 		},
@@ -61,8 +61,8 @@ func TestGroupAnagrams(t *testing.T) {
 	}
 }
 
-// 輔助函數：檢查兩個二維字符串數組是否在內容上等價
-// （即它們包含相同的字符串組，但順序可能不同）
+// 輔助函數：檢查兩個二維字串數組是否在內容上等價
+// （即它們包含相同的字串組，但順序可能不同）
 func areEquivalentResults(result, expected [][]string) bool {
 	if len(result) != len(expected) {
 		return false
@@ -75,14 +75,14 @@ func areEquivalentResults(result, expected [][]string) bool {
 	return reflect.DeepEqual(sortedResult, sortedExpected)
 }
 
-// 輔助函數：排序二維字符串數組
+// 輔助函數：排序二維字串數組
 func sortGroups(groups [][]string) [][]string {
 	// 對每個子數組進行排序
 	for i := range groups {
 		sort.Strings(groups[i])
 	}
 
-	// 將每個子數組轉換為字符串，用於排序
+	// 將每個子數組轉換為字串，用於排序
 	groupStrs := make([]string, len(groups))
 	for i, group := range groups {
 		for _, s := range group {
@@ -90,7 +90,7 @@ func sortGroups(groups [][]string) [][]string {
 		}
 	}
 
-	// 根據字符串表示對組進行排序
+	// 根據字串表示對組進行排序
 	sortedIndices := make([]int, len(groups))
 	for i := range sortedIndices {
 		sortedIndices[i] = i

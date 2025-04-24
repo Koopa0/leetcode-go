@@ -20,7 +20,7 @@ func longestPalindrome(s string) string {
 	C, R := 0, 0
 
 	// 步驟 3: 計算每個位置的回文半徑
-	// 注意：我們跳過首尾的哨兵字符，所以範圍是 [1, n-1)
+	// 注意：我們跳過首尾的哨兵字，所以範圍是 [1, n-1)
 	for i := 1; i < len(T)-1; i++ {
 
 		if R > i {

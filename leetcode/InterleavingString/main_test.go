@@ -36,7 +36,7 @@ func TestIsInterleave(t *testing.T) {
 			s2:       "",
 			s3:       "",
 			expected: true,
-			desc:     "測試空字符串",
+			desc:     "測試空字串",
 		},
 		{
 			name:     "OneEmptyString",
@@ -44,7 +44,7 @@ func TestIsInterleave(t *testing.T) {
 			s2:       "abc",
 			s3:       "abc",
 			expected: true,
-			desc:     "測試一個空字符串的情況",
+			desc:     "測試一個空字串的情況",
 		},
 		{
 			name:     "LengthMismatch",
@@ -60,7 +60,7 @@ func TestIsInterleave(t *testing.T) {
 			s2:       strings.Repeat("b", 50),
 			s3:       strings.Repeat("ab", 50),
 			expected: true,
-			desc:     "測試較大字符串的性能",
+			desc:     "測試較大字串的性能",
 		},
 	}
 

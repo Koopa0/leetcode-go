@@ -26,10 +26,10 @@ func TestStrStr(t *testing.T) {
 		{"Multiple occurrences", "abababa", "aba", 0},
 		{"No match", "abcdef", "xyz", -1},
 
-		// 長字符串
+		// 長字串
 		{"Long strings", "a" + strings.Repeat("b", 10000) + "c", "bc", 10000},
 
-		// 重複字符
+		// 重複字
 		{"Repeating characters", "aaaaa", "aa", 0},
 	}
 

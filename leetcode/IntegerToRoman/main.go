@@ -24,7 +24,7 @@ func intToRoman(num int) string {
 		{"I", 1},
 	}
 
-	// 結果字符串
+	// 結果字串
 	var result strings.Builder
 
 	// 貪心算法：從最大的符號開始

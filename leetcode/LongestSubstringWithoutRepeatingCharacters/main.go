@@ -2,7 +2,7 @@ package LongestSubstringWithoutRepeatingCharacters
 
 func lengthOfLongestSubstring(s string) int {
 
-	// 假設字符集僅為 ASCII
+	// 假設字集僅為 ASCII
 	chart := [128]int{}
 
 	// 遍歷初始化每個都是-1 假設都沒被找到

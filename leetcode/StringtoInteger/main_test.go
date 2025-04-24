@@ -28,7 +28,7 @@ func TestMyAtoi(t *testing.T) {
 		{"large_overflow_positive", "9999999999", 2147483647},
 		{"large_overflow_negative", "-9999999999", -2147483648},
 
-		// 特殊字符
+		// 特殊字
 		{"with_dots", "3.14159", 3},
 		{"with_plus_and_spaces", "  +  413", 0},
 		{"with_multiple_signs", "+-12", 0},
