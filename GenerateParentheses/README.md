@@ -1,3 +1,5 @@
+# LeetCode 22: Generate Parentheses
+
 # 1. Original Problem
 
 Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
@@ -118,11 +120,11 @@ For example, given n = 3, a solution set is:
    1.1 添加 "("：current="(("，open=2，close=0
        1.1.1 添加 ")"：current="(()"，open=2，close=1
            1.1.1.1 添加 ")"：current="(())"，open=2，close=2
-               ✓ 達到目標長度，添加到結果：["(())"]
+                達到目標長度，添加到結果：["(())"]
    1.2 添加 ")"：current="()"，open=1，close=1
        1.2.1 添加 "("：current="()("，open=2，close=1
            1.2.1.1 添加 ")"：current="()()"，open=2，close=2
-               ✓ 達到目標長度，添加到結果：["(())", "()()"]
+                達到目標長度，添加到結果：["(())", "()()"]
 ```
 
 這種方法的優勢在於：

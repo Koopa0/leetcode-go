@@ -1,3 +1,5 @@
+# LeetCode 47: Permutations II
+
 # Permutations II (LeetCode 47) 全面分析與解決方案
 
 ## 1. 原始問題

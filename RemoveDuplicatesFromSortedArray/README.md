@@ -1,3 +1,5 @@
+# LeetCode 26: Remove Duplicates from Sorted Array
+
 ## 1. Original Problem
 
 ### English Version:

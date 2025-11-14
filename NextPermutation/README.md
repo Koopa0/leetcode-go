@@ -1,3 +1,5 @@
+# LeetCode 31: Next Permutation
+
 # Next Permutation - 下一個排列
 
 ## 1. Original Problem
