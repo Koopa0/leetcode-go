@@ -2,8 +2,8 @@
 
 ## 統計
 
-- 總題數：106
-- Easy：28
+- 總題數：107
+- Easy：29
 - Medium：59
 - Hard：19
 
@@ -82,9 +82,10 @@
 | 101 | [Symmetric Tree](./SymmetricTree) | Easy | Tree, DFS, BFS |
 | 104 | [Maximum Depth of Binary Tree](./MaximumDepthofBinaryTree) | Easy | Tree, DFS, BFS |
 | 121 | [Best Time to Buy and Sell Stock](./BestTimeToBuyAndSellStock) | Easy | Array, Dynamic Programming |
+| 125 | [Valid Palindrome](./ValidPalindrome) | Easy | Two Pointers, String |
+| 136 | [Single Number](./SingleNumber) | Easy | Array, Bit Manipulation |
 | 141 | [Linked List Cycle](./LinkedListCycle) | Easy | Linked List, Two Pointers |
 | 206 | [Reverse Linked List](./ReverseLinkedList) | Easy | Linked List |
-| 125 | [Valid Palindrome](./ValidPalindrome) | Easy | Two Pointers, String |
 | 238 | [Product of Array Except Self](./ProductofArrayExceptSelf) | Medium | Array, Prefix Sum |
 
 ## 依主題分類
