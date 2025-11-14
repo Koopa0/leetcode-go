@@ -2,8 +2,8 @@
 
 ## 統計
 
-- 總題數：109
-- Easy：29
+- 總題數：110
+- Easy：30
 - Medium：61
 - Hard：19
 
@@ -88,6 +88,7 @@
 | 141 | [Linked List Cycle](./LinkedListCycle) | Easy | Linked List, Two Pointers |
 | 200 | [Number of Islands](./NumberofIslands) | Medium | Graph, DFS, BFS |
 | 206 | [Reverse Linked List](./ReverseLinkedList) | Easy | Linked List |
+| 226 | [Invert Binary Tree](./InvertBinaryTree) | Easy | Tree, DFS, BFS |
 | 238 | [Product of Array Except Self](./ProductofArrayExceptSelf) | Medium | Array, Prefix Sum |
 
 ## 依主題分類
