@@ -2,9 +2,9 @@
 
 ## 統計
 
-- 總題數：107
+- 總題數：108
 - Easy：29
-- Medium：59
+- Medium：60
 - Hard：19
 
 ## 依編號排序
@@ -85,6 +85,7 @@
 | 125 | [Valid Palindrome](./ValidPalindrome) | Easy | Two Pointers, String |
 | 136 | [Single Number](./SingleNumber) | Easy | Array, Bit Manipulation |
 | 141 | [Linked List Cycle](./LinkedListCycle) | Easy | Linked List, Two Pointers |
+| 200 | [Number of Islands](./NumberofIslands) | Medium | Graph, DFS, BFS |
 | 206 | [Reverse Linked List](./ReverseLinkedList) | Easy | Linked List |
 | 238 | [Product of Array Except Self](./ProductofArrayExceptSelf) | Medium | Array, Prefix Sum |
 
