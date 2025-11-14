@@ -2,9 +2,9 @@
 
 ## 統計
 
-- 總題數：108
+- 總題數：109
 - Easy：29
-- Medium：60
+- Medium：61
 - Hard：19
 
 ## 依編號排序
@@ -80,6 +80,7 @@
 | 99 | [Recover Binary Search Tree](./RecoverBinarySearchTree) | Medium | Tree, DFS |
 | 100 | [Same Tree](./SameTree) | Easy | Tree, DFS |
 | 101 | [Symmetric Tree](./SymmetricTree) | Easy | Tree, DFS, BFS |
+| 102 | [Binary Tree Level Order Traversal](./BinaryTreeLevelOrderTraversal) | Medium | Tree, BFS |
 | 104 | [Maximum Depth of Binary Tree](./MaximumDepthofBinaryTree) | Easy | Tree, DFS, BFS |
 | 121 | [Best Time to Buy and Sell Stock](./BestTimeToBuyAndSellStock) | Easy | Array, Dynamic Programming |
 | 125 | [Valid Palindrome](./ValidPalindrome) | Easy | Two Pointers, String |
