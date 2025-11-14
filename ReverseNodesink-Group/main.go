@@ -39,7 +39,7 @@ func reverseKGroup(head *ListNode, k int) *ListNode {
 	return dummy.Next
 }
 
-// 反轉從 head 到 tail 的子鏈表，返回新的頭和尾
+// 反轉從 head 到 tail 的子鏈結串列，返回新的頭和尾
 func reverseSubList(head, tail *ListNode) (*ListNode, *ListNode) {
 	prev := tail.Next
 	curr := head

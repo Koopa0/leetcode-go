@@ -25,7 +25,7 @@ func TestSearchInsert(t *testing.T) {
 		{"duplicate target (not in problem, but good to test)", []int{1, 3, 5, 5, 6}, 5, 2}, // 找到第一個匹配
 
 		// 性能測試案例
-		{"large array", generateLargeArray(1000), 999, 999}, // 生成一個大數組進行測試
+		{"large array", generateLargeArray(1000), 999, 999}, // 生成一個大陣列進行測試
 	}
 
 	for _, tt := range tests {
@@ -38,7 +38,7 @@ func TestSearchInsert(t *testing.T) {
 	}
 }
 
-// 生成一個包含 n 個元素的大數組
+// 生成一個包含 n 個元素的大陣列
 func generateLargeArray(n int) []int {
 	result := make([]int, n)
 	for i := 0; i < n; i++ {

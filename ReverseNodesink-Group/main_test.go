@@ -72,13 +72,13 @@ func TestReverseKGroup(t *testing.T) {
 	// 執行測試
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			// 構建輸入鏈表
+			// 構建輸入鏈結串列
 			head := buildList(tt.input)
 
 			// 執行函數
 			result := reverseKGroup(head, tt.k)
 
-			// 將結果轉換回數組
+			// 將結果轉換回陣列
 			resultArr := listToArray(result)
 
 			if len(resultArr) == 0 && len(tt.expected) == 0 {
@@ -93,7 +93,7 @@ func TestReverseKGroup(t *testing.T) {
 	}
 }
 
-// 輔助函數：將整數數組轉換為鏈表
+// 輔助函數：將整數陣列轉換為鏈結串列
 func buildList(nums []int) *ListNode {
 	dummy := &ListNode{}
 	curr := dummy
@@ -106,7 +106,7 @@ func buildList(nums []int) *ListNode {
 	return dummy.Next
 }
 
-// 輔助函數：將鏈表轉換為整數數組
+// 輔助函數：將鏈結串列轉換為整數陣列
 func listToArray(head *ListNode) []int {
 	var result []int
 

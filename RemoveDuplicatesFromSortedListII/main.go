@@ -1,7 +1,7 @@
 package RemoveDuplicatesFromSortedListII
 
 /**
- * 鏈表節點定義
+ * 鏈結串列節點定義
  * type ListNode struct {
  *     Val int
  *     Next *ListNode
@@ -40,7 +40,7 @@ func deleteDuplicateBasic(head *ListNode) *ListNode {
 }
 
 func deleteDuplicatesBacktracking(head *ListNode) *ListNode {
-	// 基本情況：空鏈表或只有一個節點
+	// 基本情況：空鏈結串列或只有一個節點
 	if head == nil || head.Next == nil {
 		return head
 	}
@@ -61,7 +61,7 @@ func deleteDuplicatesBacktracking(head *ListNode) *ListNode {
 }
 
 func deleteDuplicates(head *ListNode) *ListNode {
-	// 處理空鏈表
+	// 處理空鏈結串列
 	if head == nil {
 		return nil
 	}

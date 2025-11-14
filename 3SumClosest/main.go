@@ -3,7 +3,7 @@ package threeSumClosest
 import "sort"
 
 func threeSumClosest(nums []int, target int) int {
-	// 對數組進行排序
+	// 對陣列進行排序
 	sort.Ints(nums)
 
 	n := len(nums)

@@ -6,7 +6,7 @@ import (
 )
 
 func TestMergeTwoLists(t *testing.T) {
-	// 輔助函數：從切片創建鏈表
+	// 輔助函數：從切片創建鏈結串列
 	createList := func(values []int) *ListNode {
 		dummy := &ListNode{}
 		current := dummy
@@ -17,7 +17,7 @@ func TestMergeTwoLists(t *testing.T) {
 		return dummy.Next
 	}
 
-	// 輔助函數：將鏈表轉換為切片，便於比較
+	// 輔助函數：將鏈結串列轉換為切片，便於比較
 	listToSlice := func(head *ListNode) []int {
 		result := []int{}
 		for head != nil {

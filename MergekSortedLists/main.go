@@ -4,13 +4,13 @@ import (
 	"container/heap"
 )
 
-// ListNode 定義鏈表節點結構
+// ListNode 定義鏈結串列節點結構
 type ListNode struct {
 	Val  int
 	Next *ListNode
 }
 
-// NodeHeap 定義一個最小堆，用於存儲鏈表節點
+// NodeHeap 定義一個最小堆，用於存儲鏈結串列節點
 type NodeHeap []*ListNode
 
 // Len 實現 heap.Interface 所需的方法
@@ -36,14 +36,14 @@ func (h *NodeHeap) Pop() interface{} {
 	return x
 }
 
-// MergeKLists 合併 k 個排序鏈表
+// MergeKLists 合併 k 個排序鏈結串列
 func MergeKLists(lists []*ListNode) *ListNode {
 	// 處理空輸入
 	if len(lists) == 0 {
 		return nil
 	}
 
-	// 創建一個虛擬頭節點，用於構建結果鏈表
+	// 創建一個虛擬頭節點，用於構建結果鏈結串列
 	dummy := &ListNode{}
 	curr := dummy
 
@@ -51,14 +51,14 @@ func MergeKLists(lists []*ListNode) *ListNode {
 	h := &NodeHeap{}
 	heap.Init(h)
 
-	// 將所有非空鏈表的頭節點加入堆中
+	// 將所有非空鏈結串列的頭節點加入堆中
 	for _, list := range lists {
 		if list != nil {
 			heap.Push(h, list)
 		}
 	}
 
-	// 不斷從堆中取出最小節點，加入結果鏈表
+	// 不斷從堆中取出最小節點，加入結果鏈結串列
 	for h.Len() > 0 {
 		// 彈出堆頂元素（當前最小節點）
 		minNode := heap.Pop(h).(*ListNode)
@@ -107,7 +107,7 @@ func MergeKListsDivideConquer(lists []*ListNode) *ListNode {
 	return mergeTwoLists(left, right)
 }
 
-// mergeTwoLists 合併兩個排序鏈表
+// mergeTwoLists 合併兩個排序鏈結串列
 func mergeTwoLists(l1, l2 *ListNode) *ListNode {
 	dummy := &ListNode{}
 	curr := dummy

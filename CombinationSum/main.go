@@ -3,7 +3,7 @@ package CombinationSum
 import "sort"
 
 func combinationSum(candidates []int, target int) [][]int {
-	// 排序候選數組（非必須，但有利於優化）
+	// 排序候選陣列（非必須，但有利於優化）
 	sort.Ints(candidates)
 
 	// 用於存儲結果

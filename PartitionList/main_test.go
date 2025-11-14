@@ -29,11 +29,11 @@ func TestPartition(t *testing.T) {
 			desc:     "測試邊界值情況",
 		},
 		{
-			name:     "空鏈表",
+			name:     "空鏈結串列",
 			head:     nil,
 			x:        3,
 			expected: nil,
-			desc:     "測試空鏈表的處理",
+			desc:     "測試空鏈結串列的處理",
 		},
 		{
 			name:     "所有節點都小於x",
@@ -54,7 +54,7 @@ func TestPartition(t *testing.T) {
 			head:     createLinkedList([]int{1}),
 			x:        0,
 			expected: createLinkedList([]int{1}),
-			desc:     "測試單節點鏈表的處理",
+			desc:     "測試單節點鏈結串列的處理",
 		},
 	}
 
@@ -68,7 +68,7 @@ func TestPartition(t *testing.T) {
 	}
 }
 
-// 輔助函數：創建鏈表
+// 輔助函數：創建鏈結串列
 func createLinkedList(values []int) *ListNode {
 	if len(values) == 0 {
 		return nil
@@ -85,7 +85,7 @@ func createLinkedList(values []int) *ListNode {
 	return head
 }
 
-// 輔助函數：比較兩個鏈表是否相等
+// 輔助函數：比較兩個鏈結串列是否相等
 func isLinkedListEqual(l1, l2 *ListNode) bool {
 	for l1 != nil && l2 != nil {
 		if l1.Val != l2.Val {
@@ -95,11 +95,11 @@ func isLinkedListEqual(l1, l2 *ListNode) bool {
 		l2 = l2.Next
 	}
 
-	// 檢查兩個鏈表是否都到達結尾
+	// 檢查兩個鏈結串列是否都到達結尾
 	return l1 == nil && l2 == nil
 }
 
-// 輔助函數：將鏈表轉換為切片（用於錯誤消息）
+// 輔助函數：將鏈結串列轉換為切片（用於錯誤消息）
 func linkedListToSlice(head *ListNode) []int {
 	result := []int{}
 	current := head
@@ -113,7 +113,7 @@ func linkedListToSlice(head *ListNode) []int {
 }
 
 func BenchmarkPartition(b *testing.B) {
-	// 準備測試資料，包含不同規模的鏈表
+	// 準備測試資料，包含不同規模的鏈結串列
 	testCases := []struct {
 		name string
 		size int
@@ -125,16 +125,16 @@ func BenchmarkPartition(b *testing.B) {
 	}
 
 	for _, tc := range testCases {
-		// 創建具有隨機值的鏈表
+		// 創建具有隨機值的鏈結串列
 		values := make([]int, tc.size)
 		for i := 0; i < tc.size; i++ {
 			values[i] = rand.Intn(1000) - 500 // 生成 -500 到 499 的隨機數
 		}
 		original := createLinkedList(values)
 
-		b.Run(fmt.Sprintf("%s_雙鏈表解決方案", tc.name), func(b *testing.B) {
+		b.Run(fmt.Sprintf("%s_雙鏈結串列解決方案", tc.name), func(b *testing.B) {
 			for i := 0; i < b.N; i++ {
-				// 重新複製一份鏈表，避免多次測試時鏈表結構被修改
+				// 重新複製一份鏈結串列，避免多次測試時鏈結串列結構被修改
 				testHead := cloneLinkedList(original)
 				partition(testHead, tc.x)
 			}
@@ -142,7 +142,7 @@ func BenchmarkPartition(b *testing.B) {
 	}
 }
 
-// 輔助函數：複製鏈表
+// 輔助函數：複製鏈結串列
 func cloneLinkedList(head *ListNode) *ListNode {
 	if head == nil {
 		return nil

@@ -1,7 +1,7 @@
 package JumpGameII
 
 func jump(nums []int) int {
-	// 如果數組長度為 1，直接返回 0（不需要跳躍）
+	// 如果陣列長度為 1，直接返回 0（不需要跳躍）
 	if len(nums) == 1 {
 		return 0
 	}
@@ -10,7 +10,7 @@ func jump(nums []int) int {
 	currEnd := 0  // 當前能到達的最遠位置
 	farthest := 0 // 下一步能到達的最遠位置
 
-	// 遍歷數組（注意：不需要遍歷最後一個元素）
+	// 遍歷陣列（注意：不需要遍歷最後一個元素）
 	for i := 0; i < len(nums)-1; i++ {
 		// 更新下一步能到達的最遠位置
 		farthest = max(farthest, i+nums[i])

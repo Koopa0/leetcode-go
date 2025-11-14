@@ -7,7 +7,7 @@ import (
 )
 
 func TestDeleteDuplicates(t *testing.T) {
-	// 建立測試用的鏈表結構
+	// 建立測試用的鏈結串列結構
 	createList := func(vals []int) *ListNode {
 		dummy := &ListNode{}
 		curr := dummy
@@ -18,7 +18,7 @@ func TestDeleteDuplicates(t *testing.T) {
 		return dummy.Next
 	}
 
-	// 將鏈表轉換為數組，方便比較
+	// 將鏈結串列轉換為陣列，方便比較
 	listToSlice := func(head *ListNode) []int {
 		result := []int{}
 		for head != nil {
@@ -47,10 +47,10 @@ func TestDeleteDuplicates(t *testing.T) {
 			desc:     "移除開頭的重複元素",
 		},
 		{
-			name:     "空鏈表",
+			name:     "空鏈結串列",
 			input:    []int{},
 			expected: []int{},
-			desc:     "處理空鏈表",
+			desc:     "處理空鏈結串列",
 		},
 		{
 			name:     "全部重複",
@@ -68,7 +68,7 @@ func TestDeleteDuplicates(t *testing.T) {
 			name:     "無重複",
 			input:    []int{1, 2, 3, 4},
 			expected: []int{1, 2, 3, 4},
-			desc:     "處理沒有重複的鏈表",
+			desc:     "處理沒有重複的鏈結串列",
 		},
 	}
 
@@ -105,73 +105,73 @@ func BenchmarkDeleteDuplicates(b *testing.B) {
 		return dummy.Next
 	}
 
-	// 小型鏈表，約 20 個節點
+	// 小型鏈結串列，約 20 個節點
 	smallList := createTestCase(20, 0.3)
-	// 中型鏈表，約 100 個節點
+	// 中型鏈結串列，約 100 個節點
 	mediumList := createTestCase(100, 0.3)
-	// 大型鏈表，約 300 個節點
+	// 大型鏈結串列，約 300 個節點
 	largeList := createTestCase(300, 0.3)
 
-	b.Run("小型鏈表", func(b *testing.B) {
+	b.Run("小型鏈結串列", func(b *testing.B) {
 		for i := 0; i < b.N; i++ {
-			// 複製鏈表以免修改原始測試數據
+			// 複製鏈結串列以免修改原始測試數據
 			listCopy := deepCopyList(smallList)
 			deleteDuplicateBasic(listCopy)
 		}
 	})
 
-	b.Run("中型鏈表", func(b *testing.B) {
+	b.Run("中型鏈結串列", func(b *testing.B) {
 		for i := 0; i < b.N; i++ {
 			listCopy := deepCopyList(mediumList)
 			deleteDuplicateBasic(listCopy)
 		}
 	})
 
-	b.Run("大型鏈表", func(b *testing.B) {
+	b.Run("大型鏈結串列", func(b *testing.B) {
 		for i := 0; i < b.N; i++ {
 			listCopy := deepCopyList(largeList)
 			deleteDuplicateBasic(listCopy)
 		}
 	})
 
-	b.Run("小型鏈表", func(b *testing.B) {
+	b.Run("小型鏈結串列", func(b *testing.B) {
 		for i := 0; i < b.N; i++ {
-			// 複製鏈表以免修改原始測試數據
+			// 複製鏈結串列以免修改原始測試數據
 			listCopy := deepCopyList(smallList)
 			deleteDuplicatesBacktracking(listCopy)
 		}
 	})
 
-	b.Run("中型鏈表", func(b *testing.B) {
+	b.Run("中型鏈結串列", func(b *testing.B) {
 		for i := 0; i < b.N; i++ {
 			listCopy := deepCopyList(mediumList)
 			deleteDuplicatesBacktracking(listCopy)
 		}
 	})
 
-	b.Run("大型鏈表", func(b *testing.B) {
+	b.Run("大型鏈結串列", func(b *testing.B) {
 		for i := 0; i < b.N; i++ {
 			listCopy := deepCopyList(largeList)
 			deleteDuplicatesBacktracking(listCopy)
 		}
 	})
 
-	b.Run("小型鏈表", func(b *testing.B) {
+	b.Run("小型鏈結串列", func(b *testing.B) {
 		for i := 0; i < b.N; i++ {
-			// 複製鏈表以免修改原始測試數據
+			// 複製鏈結串列以免修改原始測試數據
 			listCopy := deepCopyList(smallList)
 			deleteDuplicates(listCopy)
 		}
 	})
 
-	b.Run("中型鏈表", func(b *testing.B) {
+	b.Run("中型鏈結串列", func(b *testing.B) {
 		for i := 0; i < b.N; i++ {
 			listCopy := deepCopyList(mediumList)
 			deleteDuplicates(listCopy)
 		}
 	})
 
-	b.Run("大型鏈表", func(b *testing.B) {
+	b.Run("大型鏈結串列", func(b *testing.B) {
 		for i := 0; i < b.N; i++ {
 			listCopy := deepCopyList(largeList)
 			deleteDuplicates(listCopy)
@@ -179,7 +179,7 @@ func BenchmarkDeleteDuplicates(b *testing.B) {
 	})
 }
 
-// 深度複製鏈表
+// 深度複製鏈結串列
 func deepCopyList(head *ListNode) *ListNode {
 	if head == nil {
 		return nil

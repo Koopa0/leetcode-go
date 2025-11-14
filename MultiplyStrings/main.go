@@ -8,7 +8,7 @@ func multiply(num1 string, num2 string) string {
 		return "0"
 	}
 
-	// 初始化結果數組，長度為兩個數字的長度之和
+	// 初始化結果陣列，長度為兩個數字的長度之和
 	length := len(num1) + len(num2)
 	result := make([]int, length)
 

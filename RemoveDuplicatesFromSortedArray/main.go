@@ -9,7 +9,7 @@ func removeDuplicates(nums []int) int {
 	// 初始化慢指針和快指針
 	slow := 0
 
-	// 使用快指針遍歷數組
+	// 使用快指針遍歷陣列
 	for fast := 1; fast < len(nums); fast++ {
 		// 當找到一個與慢指針指向的元素不同的元素時
 		if nums[fast] != nums[slow] {

@@ -67,7 +67,7 @@ func isScrambleMemoization(s1 string, s2 string) bool {
 	}
 
 	n := len(s1)
-	// 初始化記憶化數組，-1 表示未計算，0 表示 false，1 表示 true
+	// 初始化記憶化陣列，-1 表示未計算，0 表示 false，1 表示 true
 	memo := make([][][]int8, n)
 	for i := range memo {
 		memo[i] = make([][]int8, n)
@@ -81,7 +81,7 @@ func isScrambleMemoization(s1 string, s2 string) bool {
 
 	var checkScramble func(i1, i2, length int) bool
 	checkScramble = func(i1, i2, length int) bool {
-		// 檢查記憶化數組
+		// 檢查記憶化陣列
 		if memo[i1][i2][length] != -1 {
 			return memo[i1][i2][length] == 1
 		}
@@ -160,7 +160,7 @@ func isScrambleDP(s1 string, s2 string) bool {
 		return false
 	}
 
-	// 初始化 DP 數組
+	// 初始化 DP 陣列
 	// dp[len][i][j] 表示 s1 從索引 i 開始，s2 從索引 j 開始，長度為 len 的子字串是否可以互相擾亂
 	dp := make([][][]bool, n+1)
 	for len := 0; len <= n; len++ {
@@ -177,7 +177,7 @@ func isScrambleDP(s1 string, s2 string) bool {
 		}
 	}
 
-	// 填充 DP 數組
+	// 填充 DP 陣列
 	for length := 2; length <= n; length++ {
 		for i := 0; i <= n-length; i++ {
 			for j := 0; j <= n-length; j++ {
@@ -291,7 +291,7 @@ func isScramble(s1 string, s2 string) bool {
 			// 交換的情況
 			leftEqual, rightEqual = true, true
 
-			// 重置字元計數數組
+			// 重置字元計數陣列
 			var charCount3 [26]int
 			for j := 0; j < i; j++ {
 				charCount3[a[j]-'a']++

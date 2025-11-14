@@ -9,7 +9,7 @@ func isMatch(s string, p string) bool {
 	// 獲取字串和模式的長度
 	m, n := len(s), len(p)
 
-	// 創建一個二維動態規劃數組
+	// 創建一個二維動態規劃陣列
 	// dp[i][j] 表示 s 的前 i 個字是否匹配 p 的前 j 個字
 	dp := make([][]bool, m+1)
 	for i := 0; i <= m; i++ {
@@ -27,7 +27,7 @@ func isMatch(s string, p string) bool {
 		}
 	}
 
-	// 填充 dp 數組
+	// 填充 dp 陣列
 	for i := 1; i <= m; i++ {
 		for j := 1; j <= n; j++ {
 			if p[j-1] == '*' {

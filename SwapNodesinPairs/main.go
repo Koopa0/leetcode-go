@@ -13,8 +13,8 @@ type ListNode struct {
 	Next *ListNode
 }
 
-// swapPairs 兩兩交換鏈表中的節點
-// 時間複雜度：O(n)，其中 n 是鏈表的長度
+// swapPairs 兩兩交換鏈結串列中的節點
+// 時間複雜度：O(n)，其中 n 是鏈結串列的長度
 // 空間複雜度：O(1)，只使用常數額外空間
 func swapPairs(head *ListNode) *ListNode {
 	// 創建啞節點，指向頭節點

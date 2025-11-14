@@ -57,7 +57,7 @@ func TestInorderTraversal(t *testing.T) {
 				},
 			},
 			expected: []int{3, 2, 1},
-			desc:     "測試左偏樹（類似鏈表）",
+			desc:     "測試左偏樹（類似鏈結串列）",
 		},
 		{
 			name: "右偏樹",
@@ -69,7 +69,7 @@ func TestInorderTraversal(t *testing.T) {
 				},
 			},
 			expected: []int{1, 2, 3},
-			desc:     "測試右偏樹（類似鏈表）",
+			desc:     "測試右偏樹（類似鏈結串列）",
 		},
 	}
 

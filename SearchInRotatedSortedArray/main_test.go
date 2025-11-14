@@ -22,19 +22,19 @@ func TestSearch(t *testing.T) {
 			expected: -1,
 		},
 		{
-			name:     "單元素數組，目標存在",
+			name:     "單元素陣列，目標存在",
 			nums:     []int{1},
 			target:   1,
 			expected: 0,
 		},
 		{
-			name:     "單元素數組，目標不存在",
+			name:     "單元素陣列，目標不存在",
 			nums:     []int{1},
 			target:   0,
 			expected: -1,
 		},
 		{
-			name:     "未旋轉數組",
+			name:     "未旋轉陣列",
 			nums:     []int{1, 2, 3, 4, 5},
 			target:   3,
 			expected: 2,
@@ -52,13 +52,13 @@ func TestSearch(t *testing.T) {
 			expected: 5,
 		},
 		{
-			name:     "目標為數組最小值",
+			name:     "目標為陣列最小值",
 			nums:     []int{4, 5, 6, 7, 0, 1, 2},
 			target:   0,
 			expected: 4,
 		},
 		{
-			name:     "目標為數組最大值",
+			name:     "目標為陣列最大值",
 			nums:     []int{4, 5, 6, 7, 0, 1, 2},
 			target:   7,
 			expected: 3,

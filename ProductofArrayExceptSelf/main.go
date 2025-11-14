@@ -1,11 +1,11 @@
 package ProductofArrayExceptSelf
 
-// productExceptSelf 計算數組中除了當前元素外所有元素的乘積
-// 輸入: nums - 整數數組
-// 輸出: 一個新數組，其中 answer[i] 是除了 nums[i] 外所有元素的乘積
+// productExceptSelf 計算陣列中除了當前元素外所有元素的乘積
+// 輸入: nums - 整數陣列
+// 輸出: 一個新陣列，其中 answer[i] 是除了 nums[i] 外所有元素的乘積
 func productExceptSelf(nums []int) []int {
 	n := len(nums)
-	// 創建結果數組
+	// 創建結果陣列
 	answer := make([]int, n)
 
 	// 第一步: 從左到右遍歷，計算當前元素左側所有元素的乘積

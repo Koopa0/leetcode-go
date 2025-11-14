@@ -6,7 +6,7 @@ type ListNode struct {
 }
 
 func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
-	// 基本情況：其中一個鏈表為空
+	// 基本情況：其中一個鏈結串列為空
 	if list1 == nil {
 		return list2
 	}
@@ -14,7 +14,7 @@ func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
 		return list1
 	}
 
-	// 遞迴情況：比較兩個鏈表頭節點的值
+	// 遞迴情況：比較兩個鏈結串列頭節點的值
 	if list1.Val <= list2.Val {
 		list1.Next = mergeTwoLists(list1.Next, list2)
 		return list1

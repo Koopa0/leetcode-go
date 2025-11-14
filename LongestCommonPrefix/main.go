@@ -2,10 +2,10 @@ package LongestCommonPrefix
 
 import "strings"
 
-// longestCommonPrefix 查找字串數組中的最長公共前綴
+// longestCommonPrefix 查找字串陣列中的最長公共前綴
 // 如果不存在公共前綴，返回空字串 ""
 func longestCommonPrefix(strs []string) string {
-	// 處理邊緣情況: 空數組或包含空字串
+	// 處理邊緣情況: 空陣列或包含空字串
 	if len(strs) == 0 {
 		return ""
 	}

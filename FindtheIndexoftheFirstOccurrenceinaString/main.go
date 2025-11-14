@@ -21,7 +21,7 @@ func strStr(haystack string, needle string) int {
 	// 初始化
 	//next[0] = 0
 
-	// 填充 next 數組
+	// 填充 next 陣列
 	for i, j := 1, 0; i < m; {
 		if needle[i] == needle[j] {
 			j++
@@ -45,7 +45,7 @@ func strStr(haystack string, needle string) int {
 				return i - j
 			}
 		} else if j > 0 {
-			// 部分匹配失敗，使用 next 數組回退
+			// 部分匹配失敗，使用 next 陣列回退
 			j = next[j-1]
 		} else {
 			// 第一個字就不匹配，直接往前移動

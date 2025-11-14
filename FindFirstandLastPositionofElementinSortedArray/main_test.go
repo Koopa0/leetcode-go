@@ -25,7 +25,7 @@ func TestSearchRange(t *testing.T) {
 			expected: []int{-1, -1},
 		},
 		{
-			name:     "空數組",
+			name:     "空陣列",
 			nums:     []int{},
 			target:   0,
 			expected: []int{-1, -1},
@@ -43,13 +43,13 @@ func TestSearchRange(t *testing.T) {
 			expected: []int{-1, -1},
 		},
 		{
-			name:     "目標值在數組開頭",
+			name:     "目標值在陣列開頭",
 			nums:     []int{8, 8, 9, 10},
 			target:   8,
 			expected: []int{0, 1},
 		},
 		{
-			name:     "目標值在數組結尾",
+			name:     "目標值在陣列結尾",
 			nums:     []int{5, 6, 7, 8, 8},
 			target:   8,
 			expected: []int{3, 4},
@@ -61,13 +61,13 @@ func TestSearchRange(t *testing.T) {
 			expected: []int{0, 4},
 		},
 		{
-			name:     "大型數組 - 目標值存在",
+			name:     "大型陣列 - 目標值存在",
 			nums:     generateSortedArray(1000, 500, 520),
 			target:   510,
 			expected: []int{10, 10},
 		},
 		{
-			name:     "大型數組 - 目標值多次出現",
+			name:     "大型陣列 - 目標值多次出現",
 			nums:     generateSortedArray(1000, 500, 505),
 			target:   502,
 			expected: []int{2, 2},
@@ -85,7 +85,7 @@ func TestSearchRange(t *testing.T) {
 	}
 }
 
-// 生成測試用的排序數組
+// 生成測試用的排序陣列
 func generateSortedArray(size, start, duplicateVal int) []int {
 	arr := make([]int, size)
 	for i := 0; i < size; i++ {

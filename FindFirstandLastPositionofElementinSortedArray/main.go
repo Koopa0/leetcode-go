@@ -25,7 +25,7 @@ func searchRange(nums []int, target int) []int {
 		return index
 	}
 
-	// 處理空數組情況
+	// 處理空陣列情況
 	if len(nums) == 0 {
 		return []int{-1, -1}
 	}

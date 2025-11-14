@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-// 構建鏈表輔助函數
+// 構建鏈結串列輔助函數
 func buildList(values []int) *ListNode {
 	dummy := &ListNode{}
 	curr := dummy
@@ -18,7 +18,7 @@ func buildList(values []int) *ListNode {
 	return dummy.Next
 }
 
-// 將鏈表轉換為數組輔助函數
+// 將鏈結串列轉換為陣列輔助函數
 func listToArray(head *ListNode) []int {
 	var result []int
 	for head != nil {
@@ -44,34 +44,34 @@ func TestMergeKLists(t *testing.T) {
 				buildList([]int{2, 6}),
 			},
 			expected: []int{1, 1, 2, 3, 4, 4, 5, 6},
-			desc:     "測試多個非空鏈表的基本合併",
+			desc:     "測試多個非空鏈結串列的基本合併",
 		},
 		{
 			name:     "空輸入",
 			lists:    []*ListNode{},
 			expected: nil,
-			desc:     "測試空鏈表數組",
+			desc:     "測試空鏈結串列陣列",
 		},
 		{
-			name: "單個空鏈表",
+			name: "單個空鏈結串列",
 			lists: []*ListNode{
 				nil,
 			},
 			expected: nil,
-			desc:     "測試只有一個空鏈表的情況",
+			desc:     "測試只有一個空鏈結串列的情況",
 		},
 		{
-			name: "多個空鏈表",
+			name: "多個空鏈結串列",
 			lists: []*ListNode{
 				nil,
 				nil,
 				nil,
 			},
 			expected: nil,
-			desc:     "測試多個空鏈表的情況",
+			desc:     "測試多個空鏈結串列的情況",
 		},
 		{
-			name: "混合空和非空鏈表",
+			name: "混合空和非空鏈結串列",
 			lists: []*ListNode{
 				buildList([]int{1, 3, 5}),
 				nil,
@@ -79,15 +79,15 @@ func TestMergeKLists(t *testing.T) {
 				nil,
 			},
 			expected: []int{1, 2, 3, 4, 5, 6},
-			desc:     "測試空和非空鏈表混合的情況",
+			desc:     "測試空和非空鏈結串列混合的情況",
 		},
 		{
-			name: "單個鏈表",
+			name: "單個鏈結串列",
 			lists: []*ListNode{
 				buildList([]int{1, 2, 3, 4, 5}),
 			},
 			expected: []int{1, 2, 3, 4, 5},
-			desc:     "測試只有一個非空鏈表的情況",
+			desc:     "測試只有一個非空鏈結串列的情況",
 		},
 		{
 			name: "完全相同的元素",
@@ -96,7 +96,7 @@ func TestMergeKLists(t *testing.T) {
 				buildList([]int{1, 1, 1}),
 			},
 			expected: []int{1, 1, 1, 1, 1, 1},
-			desc:     "測試鏈表包含完全相同的元素",
+			desc:     "測試鏈結串列包含完全相同的元素",
 		},
 		{
 			name: "負數值",
@@ -108,14 +108,14 @@ func TestMergeKLists(t *testing.T) {
 			desc:     "測試包含負數的情況",
 		},
 		{
-			name: "長度不同的鏈表",
+			name: "長度不同的鏈結串列",
 			lists: []*ListNode{
 				buildList([]int{1}),
 				buildList([]int{2, 3, 4, 5, 6}),
 				buildList([]int{7, 8}),
 			},
 			expected: []int{1, 2, 3, 4, 5, 6, 7, 8},
-			desc:     "測試長度差異很大的鏈表",
+			desc:     "測試長度差異很大的鏈結串列",
 		},
 		{
 			name: "極端大值和小值",
@@ -131,7 +131,7 @@ func TestMergeKLists(t *testing.T) {
 	// 執行測試
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			// 深拷貝輸入鏈表，避免測試間相互影響
+			// 深拷貝輸入鏈結串列，避免測試間相互影響
 			var listsCopy []*ListNode
 			for _, list := range tt.lists {
 				if list == nil {
@@ -162,7 +162,7 @@ func BenchmarkMergeKLists(b *testing.B) {
 
 	// 執行基準測試
 	for i := 0; i < b.N; i++ {
-		// 重新構建鏈表，避免修改原始數據
+		// 重新構建鏈結串列，避免修改原始數據
 		var listsCopy []*ListNode
 		for _, list := range lists {
 			listsCopy = append(listsCopy, buildList(listToArray(list)))
@@ -183,7 +183,7 @@ func BenchmarkCompareAlgorithms(b *testing.B) {
 
 	b.Run("MinHeap", func(b *testing.B) {
 		for i := 0; i < b.N; i++ {
-			// 重新構建鏈表
+			// 重新構建鏈結串列
 			var listsCopy []*ListNode
 			for _, list := range lists {
 				listsCopy = append(listsCopy, buildList(listToArray(list)))
@@ -195,7 +195,7 @@ func BenchmarkCompareAlgorithms(b *testing.B) {
 
 	b.Run("Linear", func(b *testing.B) {
 		for i := 0; i < b.N; i++ {
-			// 重新構建鏈表
+			// 重新構建鏈結串列
 			var listsCopy []*ListNode
 			for _, list := range lists {
 				listsCopy = append(listsCopy, buildList(listToArray(list)))
@@ -207,7 +207,7 @@ func BenchmarkCompareAlgorithms(b *testing.B) {
 
 	b.Run("DivideConquer", func(b *testing.B) {
 		for i := 0; i < b.N; i++ {
-			// 重新構建鏈表
+			// 重新構建鏈結串列
 			var listsCopy []*ListNode
 			for _, list := range lists {
 				listsCopy = append(listsCopy, buildList(listToArray(list)))

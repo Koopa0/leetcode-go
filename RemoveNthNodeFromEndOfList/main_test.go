@@ -6,7 +6,7 @@ import (
 )
 
 func TestRemoveNthFromEnd(t *testing.T) {
-	// 輔助函數：將切片轉換為鏈表
+	// 輔助函數：將切片轉換為鏈結串列
 	createList := func(values []int) *ListNode {
 		dummy := &ListNode{}
 		current := dummy
@@ -17,7 +17,7 @@ func TestRemoveNthFromEnd(t *testing.T) {
 		return dummy.Next
 	}
 
-	// 輔助函數：將鏈表轉換為切片，方便比較
+	// 輔助函數：將鏈結串列轉換為切片，方便比較
 	listToSlice := func(head *ListNode) []int {
 		var result []int
 		for head != nil {
@@ -42,11 +42,11 @@ func TestRemoveNthFromEnd(t *testing.T) {
 			desc:     "移除倒數第2個節點（值為4）",
 		},
 		{
-			name:     "例子2：只有一個節點的鏈表",
+			name:     "例子2：只有一個節點的鏈結串列",
 			input:    []int{1},
 			n:        1,
 			expected: []int{},
-			desc:     "鏈表只有一個節點，移除後為空",
+			desc:     "鏈結串列只有一個節點，移除後為空",
 		},
 		{
 			name:     "例子3：移除尾節點",
@@ -63,7 +63,7 @@ func TestRemoveNthFromEnd(t *testing.T) {
 			desc:     "移除倒數第3個節點（頭節點）",
 		},
 		{
-			name:     "例子5：較長的鏈表",
+			name:     "例子5：較長的鏈結串列",
 			input:    []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
 			n:        5,
 			expected: []int{1, 2, 3, 4, 5, 7, 8, 9, 10},

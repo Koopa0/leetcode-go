@@ -130,8 +130,8 @@ func maximalRectangle(matrix [][]byte) int {
 
 	rows, cols := len(matrix), len(matrix[0])
 	heights := make([]int, cols) // 每列的高度
-	left := make([]int, cols)    // 左邊界數組
-	right := make([]int, cols)   // 右邊界數組
+	left := make([]int, cols)    // 左邊界陣列
+	right := make([]int, cols)   // 右邊界陣列
 
 	// 初始化右邊界為列數
 	for i := 0; i < cols; i++ {

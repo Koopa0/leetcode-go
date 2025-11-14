@@ -26,13 +26,13 @@ func TestFourSum(t *testing.T) {
 			expected: [][]int{{2, 2, 2, 2}},
 		},
 		{
-			name:     "空數組",
+			name:     "空陣列",
 			nums:     []int{},
 			target:   0,
 			expected: [][]int{},
 		},
 		{
-			name:     "長度不足4的數組",
+			name:     "長度不足4的陣列",
 			nums:     []int{1, 2, 3},
 			target:   6,
 			expected: [][]int{},

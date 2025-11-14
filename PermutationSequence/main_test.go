@@ -66,7 +66,7 @@ func BenchmarkSolutions(b *testing.B) {
 		}
 	})
 
-	b.Run("使用鏈表的最佳解法", func(b *testing.B) {
+	b.Run("使用鏈結串列的最佳解法", func(b *testing.B) {
 		for i := 0; i < b.N; i++ {
 			getPermutation(n, k)
 		}
