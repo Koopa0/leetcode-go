@@ -2,8 +2,8 @@
 
 ## 統計
 
-- 總題數：111
-- Easy：31
+- 總題數：112
+- Easy：32
 - Medium：61
 - Hard：19
 
@@ -90,6 +90,7 @@
 | 206 | [Reverse Linked List](./ReverseLinkedList) | Easy | Linked List |
 | 226 | [Invert Binary Tree](./InvertBinaryTree) | Easy | Tree, DFS, BFS |
 | 238 | [Product of Array Except Self](./ProductofArrayExceptSelf) | Medium | Array, Prefix Sum |
+| 242 | [Valid Anagram](./ValidAnagram) | Easy | String, Hash Table, Sorting |
 | 283 | [Move Zeroes](./MoveZeroes) | Easy | Array, Two Pointers |
 
 ## 依主題分類
