@@ -3,6 +3,11 @@ package threeSumClosest
 import "sort"
 
 func threeSumClosest(nums []int, target int) int {
+	// 輸入驗證：確保至少有三個元素
+	if len(nums) < 3 {
+		panic("陣列至少需要包含三個元素")
+	}
+
 	// 對陣列進行排序
 	sort.Ints(nums)
 

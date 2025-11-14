@@ -77,21 +77,27 @@ func areEquivalentResults(result, expected [][]string) bool {
 
 // 輔助函數：排序二維字串陣列
 func sortGroups(groups [][]string) [][]string {
+	// 建立深拷貝以避免修改原始輸入
+	copyGroups := make([][]string, len(groups))
+	for i, group := range groups {
+		copyGroups[i] = append([]string(nil), group...)
+	}
+
 	// 對每個子陣列進行排序
-	for i := range groups {
-		sort.Strings(groups[i])
+	for i := range copyGroups {
+		sort.Strings(copyGroups[i])
 	}
 
 	// 將每個子陣列轉換為字串，用於排序
-	groupStrs := make([]string, len(groups))
-	for i, group := range groups {
+	groupStrs := make([]string, len(copyGroups))
+	for i, group := range copyGroups {
 		for _, s := range group {
 			groupStrs[i] += s + ","
 		}
 	}
 
 	// 根據字串表示對組進行排序
-	sortedIndices := make([]int, len(groups))
+	sortedIndices := make([]int, len(copyGroups))
 	for i := range sortedIndices {
 		sortedIndices[i] = i
 	}
@@ -100,9 +106,9 @@ func sortGroups(groups [][]string) [][]string {
 	})
 
 	// 創建排序後的結果
-	sortedGroups := make([][]string, len(groups))
+	sortedGroups := make([][]string, len(copyGroups))
 	for i, idx := range sortedIndices {
-		sortedGroups[i] = groups[idx]
+		sortedGroups[i] = copyGroups[idx]
 	}
 
 	return sortedGroups

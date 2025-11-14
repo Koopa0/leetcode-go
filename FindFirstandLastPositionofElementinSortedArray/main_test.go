@@ -87,6 +87,11 @@ func TestSearchRange(t *testing.T) {
 
 // 生成測試用的排序陣列
 func generateSortedArray(size, start, duplicateVal int) []int {
+	// 驗證 duplicateVal 在有效範圍內
+	if duplicateVal < 0 || duplicateVal >= size {
+		panic("duplicateVal 超出陣列邊界")
+	}
+
 	arr := make([]int, size)
 	for i := 0; i < size; i++ {
 		if i == duplicateVal {

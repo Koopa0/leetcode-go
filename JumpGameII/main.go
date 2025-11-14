@@ -1,8 +1,8 @@
 package JumpGameII
 
 func jump(nums []int) int {
-	// 如果陣列長度為 1，直接返回 0（不需要跳躍）
-	if len(nums) == 1 {
+	// 處理空陣列或單元素陣列
+	if len(nums) <= 1 {
 		return 0
 	}
 
@@ -30,4 +30,12 @@ func jump(nums []int) int {
 	}
 
 	return jumps
+}
+
+// max 返回兩個整數中的較大值
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
 }
