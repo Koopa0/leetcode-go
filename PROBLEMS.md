@@ -2,8 +2,8 @@
 
 ## 統計
 
-- 總題數：103
-- Easy：25
+- 總題數：104
+- Easy：26
 - Medium：59
 - Hard：19
 
@@ -80,6 +80,7 @@
 | 99 | [Recover Binary Search Tree](./RecoverBinarySearchTree) | Medium | Tree, DFS |
 | 100 | [Same Tree](./SameTree) | Easy | Tree, DFS |
 | 101 | [Symmetric Tree](./SymmetricTree) | Easy | Tree, DFS, BFS |
+| 206 | [Reverse Linked List](./ReverseLinkedList) | Easy | Linked List |
 | 121 | [Best Time to Buy and Sell Stock](./BestTimeToBuyAndSellStock) | Easy | Array, Dynamic Programming |
 | 125 | [Valid Palindrome](./ValidPalindrome) | Easy | Two Pointers, String |
 | 238 | [Product of Array Except Self](./ProductofArrayExceptSelf) | Medium | Array, Prefix Sum |
@@ -104,8 +105,8 @@
 
 ### 鏈結串列 (Linked List)
 
-- Add Two Numbers, Merge Two Sorted Lists
-- Remove Nth Node From End Of List
+- Reverse Linked List, Add Two Numbers
+- Merge Two Sorted Lists, Remove Nth Node From End Of List
 - Reverse Linked List II, Rotate List
 - Partition List, Swap Nodes in Pairs
 - Merge k Sorted Lists, Reverse Nodes in k-Group
