@@ -29,7 +29,7 @@ func groupAnagrams(strs []string) [][]string {
 		anagramMap[sortedStr] = append(anagramMap[sortedStr], str)
 	}
 
-	// 創建結果數組
+	// 創建結果陣列
 	result := make([][]string, 0, len(anagramMap))
 
 	// 收集所有的字串組

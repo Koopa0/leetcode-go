@@ -34,7 +34,7 @@ func TestLongestCommonPrefix(t *testing.T) {
 			name:     "Empty array",
 			input:    []string{},
 			expected: "",
-			desc:     "空數組應返回空字串",
+			desc:     "空陣列應返回空字串",
 		},
 		{
 			name:     "Contains empty string",

@@ -17,7 +17,7 @@ func TestMaxProfit(t *testing.T) {
 		{[]int{7, 6, 4, 3, 1}, 0, "下跌趨勢 - 無法獲利，應返回0"},
 
 		// 邊緣情況
-		{[]int{}, 0, "空數組 - 無法交易，應返回0"},
+		{[]int{}, 0, "空陣列 - 無法交易，應返回0"},
 		{[]int{1}, 0, "只有一天 - 無法同時買入和賣出，應返回0"},
 
 		// 特殊情況
@@ -33,7 +33,7 @@ func TestMaxProfit(t *testing.T) {
 		{make([]int, 10000), 0, "大規模輸入，全部相同 - 應返回0"},
 	}
 
-	// 針對大規模測試用例生成遞增數組
+	// 針對大規模測試用例生成遞增陣列
 	largeIncreasing := make([]int, 10000)
 	for i := 0; i < 10000; i++ {
 		largeIncreasing[i] = i

@@ -49,7 +49,7 @@ func TestRemoveDuplicates(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			// 創建輸入數組的副本以避免修改原始測試數據
+			// 創建輸入陣列的副本以避免修改原始測試數據
 			nums := make([]int, len(tt.input))
 			copy(nums, tt.input)
 

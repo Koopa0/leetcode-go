@@ -142,11 +142,11 @@ func generateLargeTestTree(size int) *TreeNode {
 	idx1, idx2 := size/3, 2*size/3
 	nodes[idx1], nodes[idx2] = nodes[idx2], nodes[idx1]
 
-	// 從有序數組構建 BST
+	// 從有序陣列構建 BST
 	return buildBST(nodes, 0, len(nodes)-1)
 }
 
-// 從有序數組構建 BST
+// 從有序陣列構建 BST
 func buildBST(nums []int, start, end int) *TreeNode {
 	if start > end {
 		return nil

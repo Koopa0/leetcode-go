@@ -65,7 +65,7 @@ func TestRotateRight(t *testing.T) {
 			// 執行旋轉
 			result := rotateRight(head, tt.k)
 
-			// 轉換結果為數組並比較
+			// 轉換結果為陣列並比較
 			resultArray := listToArray(result)
 			if !reflect.DeepEqual(resultArray, tt.expected) && tt.expected != nil {
 				t.Errorf("rotateRight() = %v, want %v", resultArray, tt.expected)
@@ -91,7 +91,7 @@ func constructList(values []int) *ListNode {
 	return head
 }
 
-// 輔助函數：將鏈結串列轉換為數組
+// 輔助函數：將鏈結串列轉換為陣列
 func listToArray(head *ListNode) []int {
 	result := []int{}
 	current := head

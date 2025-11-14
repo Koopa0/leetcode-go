@@ -35,7 +35,7 @@ func minPathSumHelper(grid [][]int, i, j int) int {
 func minPathSumMemoization(grid [][]int) int {
 	m, n := len(grid), len(grid[0])
 
-	// 初始化記憶化數組，使用 -1 表示尚未計算
+	// 初始化記憶化陣列，使用 -1 表示尚未計算
 	memo := make([][]int, m)
 	for i := range memo {
 		memo[i] = make([]int, n)
@@ -126,7 +126,7 @@ func minPathSumOptimized(grid [][]int) int {
 
 	m, n := len(grid), len(grid[0])
 
-	// 只使用一維數組
+	// 只使用一維陣列
 	dp := make([]int, n)
 
 	// 初始化第一個元素

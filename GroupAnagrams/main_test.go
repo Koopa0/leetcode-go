@@ -61,28 +61,28 @@ func TestGroupAnagrams(t *testing.T) {
 	}
 }
 
-// 輔助函數：檢查兩個二維字串數組是否在內容上等價
+// 輔助函數：檢查兩個二維字串陣列是否在內容上等價
 // （即它們包含相同的字串組，但順序可能不同）
 func areEquivalentResults(result, expected [][]string) bool {
 	if len(result) != len(expected) {
 		return false
 	}
 
-	// 先對每個子數組進行排序，然後排序外層數組
+	// 先對每個子陣列進行排序，然後排序外層陣列
 	sortedResult := sortGroups(result)
 	sortedExpected := sortGroups(expected)
 
 	return reflect.DeepEqual(sortedResult, sortedExpected)
 }
 
-// 輔助函數：排序二維字串數組
+// 輔助函數：排序二維字串陣列
 func sortGroups(groups [][]string) [][]string {
-	// 對每個子數組進行排序
+	// 對每個子陣列進行排序
 	for i := range groups {
 		sort.Strings(groups[i])
 	}
 
-	// 將每個子數組轉換為字串，用於排序
+	// 將每個子陣列轉換為字串，用於排序
 	groupStrs := make([]string, len(groups))
 	for i, group := range groups {
 		for _, s := range group {

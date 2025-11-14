@@ -43,11 +43,11 @@ func TestFindSubstring(t *testing.T) {
 			desc:     "測試空字串邊界情況",
 		},
 		{
-			name:     "空單詞數組",
+			name:     "空單詞陣列",
 			s:        "barfoothefoobarman",
 			words:    []string{},
 			expected: []int{},
-			desc:     "測試空單詞數組邊界情況",
+			desc:     "測試空單詞陣列邊界情況",
 		},
 		{
 			name:     "重複單詞",

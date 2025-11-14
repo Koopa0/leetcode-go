@@ -2,15 +2,15 @@ package MedianofTwoSortedArrays
 
 //func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 //	// 確保 nums1 的長度不大於 nums2，這樣可以簡化邊界條件檢查
-//	// 如果 nums1 比 nums2 長，則交換兩個數組
+//	// 如果 nums1 比 nums2 長，則交換兩個陣列
 //	if len(nums1) > len(nums2) {
 //		nums1, nums2 = nums2, nums1
 //	}
 //
-//	// 取得兩個數組的長度
+//	// 取得兩個陣列的長度
 //	m, n := len(nums1), len(nums2)
 //
-//	// 計算合併後數組的總長度
+//	// 計算合併後陣列的總長度
 //	totalLength := m + n
 //
 //	// 計算要找的中間位置（左半部分的元素個數）
@@ -49,7 +49,7 @@ package MedianofTwoSortedArrays
 //				maxLeft = nums2[j-1]
 //			} else if j == 0 { // 如果 nums2 的左半部分為空
 //				maxLeft = nums1[i-1]
-//			} else { // 兩個數組的左半部分都不為空
+//			} else { // 兩個陣列的左半部分都不為空
 //				maxLeft = max(nums1[i-1], nums2[j-1])
 //			}
 //
@@ -64,7 +64,7 @@ package MedianofTwoSortedArrays
 //				minRight = nums2[j]
 //			} else if j == n { // 如果 nums2 的右半部分為空
 //				minRight = nums1[i]
-//			} else { // 兩個數組的右半部分都不為空
+//			} else { // 兩個陣列的右半部分都不為空
 //				minRight = min(nums1[i], nums2[j])
 //			}
 //
@@ -130,7 +130,7 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 				minRight = nums2[j]
 			} else if j == n { // 如果 nums2 的右半部分為空
 				minRight = nums1[i]
-			} else { // 兩個數組的右半部分都不為空
+			} else { // 兩個陣列的右半部分都不為空
 				minRight = min(nums1[i], nums2[j])
 			}
 

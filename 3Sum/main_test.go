@@ -30,7 +30,7 @@ func TestThreeSum(t *testing.T) {
 			name:     "Example 3",
 			nums:     []int{0, 0, 0},
 			expected: [][]int{{0, 0, 0}},
-			desc:     "全零數組",
+			desc:     "全零陣列",
 		},
 		{
 			name:     "Contains duplicates",
@@ -60,7 +60,7 @@ func TestThreeSum(t *testing.T) {
 			name:     "Minimum length",
 			nums:     []int{1, 2, 3},
 			expected: [][]int{},
-			desc:     "最小長度為3的數組",
+			desc:     "最小長度為3的陣列",
 		},
 	}
 

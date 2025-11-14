@@ -29,7 +29,7 @@ func TestProductExceptSelf(t *testing.T) {
 			name:     "最小輸入",
 			input:    []int{1, 2},
 			expected: []int{2, 1},
-			desc:     "測試最小長度數組",
+			desc:     "測試最小長度陣列",
 		},
 		{
 			name:     "包含多個零",
@@ -76,7 +76,7 @@ func TestProductExceptSelf(t *testing.T) {
 
 // 性能測試
 func BenchmarkProductExceptSelf(b *testing.B) {
-	// 創建一個較大的測試數組
+	// 創建一個較大的測試陣列
 	largeInput := make([]int, 1000)
 	for i := range largeInput {
 		largeInput[i] = i + 1

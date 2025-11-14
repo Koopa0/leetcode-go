@@ -22,7 +22,7 @@ func TestPermuteUnique(t *testing.T) {
 			expected: [][]int{{1, 2, 3}, {1, 3, 2}, {2, 1, 3}, {2, 3, 1}, {3, 1, 2}, {3, 2, 1}},
 		},
 		{
-			name:     "單元素數組",
+			name:     "單元素陣列",
 			nums:     []int{1},
 			expected: [][]int{{1}},
 		},

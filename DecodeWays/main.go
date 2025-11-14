@@ -36,7 +36,7 @@ func recursiveDecoding(s string, index int) int {
 
 // 帶記憶化的遞迴解法
 func memoizedNumDecodings(s string) int {
-	// 初始化記憶化數組，-1表示尚未計算
+	// 初始化記憶化陣列，-1表示尚未計算
 	memo := make([]int, len(s)+1)
 	for i := range memo {
 		memo[i] = -1

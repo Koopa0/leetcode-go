@@ -85,7 +85,7 @@ func mathematicalSolution(n int, k int) string {
 
 // 最佳解法
 func getPermutation(n int, k int) string {
-	// 創建數字鏈表
+	// 創建數字鏈結串列
 	numList := list.New()
 	for i := 1; i <= n; i++ {
 		numList.PushBack(i)
@@ -105,7 +105,7 @@ func getPermutation(n int, k int) string {
 		// 計算當前位置的數字索引
 		index := k / factorial
 
-		// 從鏈表中找到對應的數字
+		// 從鏈結串列中找到對應的數字
 		e := numList.Front()
 		for j := 0; j < index; j++ {
 			e = e.Next()
@@ -114,7 +114,7 @@ func getPermutation(n int, k int) string {
 		// 將數字加入結果
 		result.WriteRune(rune('0' + e.Value.(int)))
 
-		// 從鏈表中移除已使用的數字
+		// 從鏈結串列中移除已使用的數字
 		numList.Remove(e)
 
 		// 更新 k 和階乘

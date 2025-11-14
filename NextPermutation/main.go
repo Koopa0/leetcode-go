@@ -1,7 +1,7 @@
 package NextPermutation
 
 func nextPermutation(nums []int) {
-	// 特殊情況處理：長度小於2的數組沒有其他排列
+	// 特殊情況處理：長度小於2的陣列沒有其他排列
 	if len(nums) < 2 {
 		return
 	}
@@ -27,13 +27,13 @@ func nextPermutation(nums []int) {
 		nums[i], nums[j] = nums[j], nums[i]
 	}
 
-	// 步驟3：反轉從i+1到末尾的子數組
+	// 步驟3：反轉從i+1到末尾的子陣列
 	// 不論是否找到遞減元素，都需要反轉
-	// 如果i為-1（沒有找到遞減元素），則反轉整個數組
+	// 如果i為-1（沒有找到遞減元素），則反轉整個陣列
 	reverse(nums, i+1, n-1)
 }
 
-// // reverse 反轉數組中指定範圍的元素
+// // reverse 反轉陣列中指定範圍的元素
 func reverse(nums []int, start, end int) {
 	for start < end {
 		nums[start], nums[end] = nums[end], nums[start]

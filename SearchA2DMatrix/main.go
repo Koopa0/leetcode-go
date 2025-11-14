@@ -51,7 +51,7 @@ func twoBinarySearchMatrix(matrix [][]int, target int) bool {
 	return false
 }
 
-// 輔助函數：在一維數組中進行二分搜尋
+// 輔助函數：在一維陣列中進行二分搜尋
 func binarySearch(nums []int, target int) bool {
 	left, right := 0, len(nums)-1
 	for left <= right {
@@ -76,7 +76,7 @@ func searchMatrix(matrix [][]int, target int) bool {
 	}
 	n := len(matrix[0])
 
-	// 在虛擬的一維數組上執行二分搜尋
+	// 在虛擬的一維陣列上執行二分搜尋
 	left, right := 0, m*n-1
 	for left <= right {
 		mid := left + (right-left)/2

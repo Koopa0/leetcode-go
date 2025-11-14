@@ -25,7 +25,7 @@ func removeNthFromEnd(head *ListNode, n int) *ListNode {
 		fast = fast.Next
 	}
 
-	// 快慢指針一起走，直到快指針達到鏈表末尾
+	// 快慢指針一起走，直到快指針達到鏈結串列末尾
 	for fast != nil && fast.Next != nil {
 		fast = fast.Next
 		slow = slow.Next

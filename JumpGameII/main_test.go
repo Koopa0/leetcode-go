@@ -19,7 +19,7 @@ func TestJump(t *testing.T) {
 			expected: 2,
 		},
 		{
-			name:     "單元素數組",
+			name:     "單元素陣列",
 			nums:     []int{0},
 			expected: 0,
 		},
@@ -39,7 +39,7 @@ func TestJump(t *testing.T) {
 			expected: 1,
 		},
 		{
-			name:     "大型數組",
+			name:     "大型陣列",
 			nums:     []int{5, 9, 3, 2, 1, 0, 2, 3, 3, 1, 0, 0},
 			expected: 3,
 		},

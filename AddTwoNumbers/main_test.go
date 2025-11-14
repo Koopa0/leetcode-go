@@ -6,7 +6,7 @@ import (
 )
 
 func TestAddTwoNumbers(t *testing.T) {
-	// 輔助函數：將數組轉換為鏈表
+	// 輔助函數：將陣列轉換為鏈結串列
 	createList := func(nums []int) *ListNode {
 		dummy := &ListNode{}
 		curr := dummy
@@ -17,7 +17,7 @@ func TestAddTwoNumbers(t *testing.T) {
 		return dummy.Next
 	}
 
-	// 輔助函數：將鏈表轉換為數組（用於比較）
+	// 輔助函數：將鏈結串列轉換為陣列（用於比較）
 	listToSlice := func(head *ListNode) []int {
 		var result []int
 		for head != nil {
@@ -50,11 +50,11 @@ func TestAddTwoNumbers(t *testing.T) {
 			desc:     "測試兩個0相加",
 		},
 		{
-			name:     "長度不等的鏈表",
+			name:     "長度不等的鏈結串列",
 			l1:       []int{9, 9, 9, 9, 9, 9, 9},
 			l2:       []int{9, 9, 9, 9},
 			expected: []int{8, 9, 9, 9, 0, 0, 0, 1},
-			desc:     "測試長度不等的鏈表相加，並有額外進位",
+			desc:     "測試長度不等的鏈結串列相加，並有額外進位",
 		},
 		{
 			name:     "一個數較大一個較小",
@@ -71,7 +71,7 @@ func TestAddTwoNumbers(t *testing.T) {
 			desc:     "測試只有進位的情況",
 		},
 		{
-			name:     "極端情況：長鏈表",
+			name:     "極端情況：長鏈結串列",
 			l1:       make([]int, 100), // 100個0
 			l2:       []int{1},
 			expected: append([]int{1}, make([]int, 99)...),

@@ -25,18 +25,18 @@ func TestFindMedianSortedArrays(t *testing.T) {
 			desc:  "基本情況，總長度為偶數",
 		},
 		{
-			name:  "空數組測試",
+			name:  "空陣列測試",
 			nums1: []int{},
 			nums2: []int{1},
 			want:  1.0,
-			desc:  "測試其中一個數組為空的情況",
+			desc:  "測試其中一個陣列為空的情況",
 		},
 		{
-			name:  "數組長度差異大",
+			name:  "陣列長度差異大",
 			nums1: []int{1},
 			nums2: []int{2, 3, 4, 5, 6, 7, 8},
 			want:  4.5,
-			desc:  "測試兩個數組長度差異很大的情況",
+			desc:  "測試兩個陣列長度差異很大的情況",
 		},
 		{
 			name:  "重複元素",

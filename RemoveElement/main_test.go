@@ -30,7 +30,7 @@ func TestRemoveElement(t *testing.T) {
 			result:   []int{0, 1, 3, 0, 4},
 		},
 		{
-			name:     "空數組",
+			name:     "空陣列",
 			nums:     []int{},
 			val:      1,
 			expected: 0,
@@ -69,7 +69,7 @@ func TestRemoveElement(t *testing.T) {
 	// 遍歷測試用例
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			// 創建原數組的副本，因為函數會修改數組
+			// 創建原陣列的副本，因為函數會修改陣列
 			numsCopy := make([]int, len(tt.nums))
 			copy(numsCopy, tt.nums)
 
@@ -81,14 +81,14 @@ func TestRemoveElement(t *testing.T) {
 				t.Errorf("removeElement() 返回值 = %v, 期望 %v", got, tt.expected)
 			}
 
-			// 檢查數組前 k 個元素（需要先排序）
+			// 檢查陣列前 k 個元素（需要先排序）
 			sort.Ints(numsCopy[:got])
 			resultCopy := make([]int, len(tt.result))
 			copy(resultCopy, tt.result)
 			sort.Ints(resultCopy)
 
 			if !reflect.DeepEqual(numsCopy[:got], resultCopy) {
-				t.Errorf("removeElement() 處理後數組前 %d 個元素 = %v, 期望 %v", got, numsCopy[:got], resultCopy)
+				t.Errorf("removeElement() 處理後陣列前 %d 個元素 = %v, 期望 %v", got, numsCopy[:got], resultCopy)
 			}
 		})
 	}

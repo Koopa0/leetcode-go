@@ -13,7 +13,7 @@ func TestPermute(t *testing.T) {
 		length   int // 期望的排列數量
 	}{
 		{
-			name:     "空數組",
+			name:     "空陣列",
 			input:    []int{},
 			expected: [][]int{{}},
 			length:   1,

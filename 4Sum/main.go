@@ -3,12 +3,12 @@ package fourSum
 import "sort"
 
 func fourSum(nums []int, target int) [][]int {
-	// 排序數組
+	// 排序陣列
 	sort.Ints(nums)
 	n := len(nums)
 	result := [][]int{}
 
-	// 特殊情況：數組長度不足4
+	// 特殊情況：陣列長度不足4
 	if n < 4 {
 		return result
 	}

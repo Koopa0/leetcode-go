@@ -39,7 +39,7 @@ func isInterleaveOptimized(s1 string, s2 string, s3 string) bool {
 		return false
 	}
 
-	// 創建記憶化數組
+	// 創建記憶化陣列
 	memo := make([][]int, len(s1)+1)
 	for i := range memo {
 		memo[i] = make([]int, len(s2)+1)
@@ -56,7 +56,7 @@ func isInterleaveOptimized(s1 string, s2 string, s3 string) bool {
 			return i == len(s1) && j == len(s2)
 		}
 
-		// 檢查記憶化數組
+		// 檢查記憶化陣列
 		if memo[i][j] != -1 {
 			return memo[i][j] == 1
 		}
@@ -74,7 +74,7 @@ func isInterleaveOptimized(s1 string, s2 string, s3 string) bool {
 			result = dfs(i, j+1, k+1)
 		}
 
-		// 更新記憶化數組
+		// 更新記憶化陣列
 		if result {
 			memo[i][j] = 1
 		} else {

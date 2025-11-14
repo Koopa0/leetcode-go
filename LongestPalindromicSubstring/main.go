@@ -51,7 +51,7 @@ func longestPalindrome(s string) string {
 	}
 
 	// 步驟 6: 找出最長回文子串
-	// 遍歷回文半徑數組 P，找出最大值及其對應的中心點
+	// 遍歷回文半徑陣列 P，找出最大值及其對應的中心點
 	maxLen := 0      // 最大回文半徑
 	centerIndex := 0 // 最大回文的中心點
 	for i, v := range P {

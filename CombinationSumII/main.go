@@ -8,7 +8,7 @@ func combinationSum2(candidates []int, target int) [][]int {
 	// 結果切片，用於存儲所有有效的組合
 	result := [][]int{}
 
-	// 對候選數組進行排序，使相同的數字相鄰，便於去重
+	// 對候選陣列進行排序，使相同的數字相鄰，便於去重
 	sort.Ints(candidates)
 
 	// 定義用於回溯的輔助函數
@@ -36,7 +36,7 @@ func combinationSum2(candidates []int, target int) [][]int {
 				continue
 			}
 
-			// 當前數字大於剩餘目標值，由於數組已排序，後續數字也一定大於剩餘目標值，可提前退出
+			// 當前數字大於剩餘目標值，由於陣列已排序，後續數字也一定大於剩餘目標值，可提前退出
 			if candidates[i] > remain {
 				break
 			}
